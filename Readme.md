@@ -16,19 +16,21 @@ O objetivo deste checkpoint é utilizar conceitos de orientação a objetos apre
 
 **Sobre a proposta:**
 
-1. Características básicas. Criar uma nova proposta para um problema a ser solucionado. O texto com a definição da proposta deverá conter no mínimo 3 (três) parágrafos: Uma introdução explicando o problema de forma geral.  **(FAZER)**
+1. Características básicas:
 
-   ​	a. Um parágrafo descrevendo o cenário da aplicação;
+   ​	a. Criar uma nova proposta para um problema a ser solucionado. O texto com a definição da proposta deverá conter no 		mínimo 3 (três) parágrafos: Uma introdução explicando o problema de forma geral; **(FAZER)**
 
-   ​	b. Um ou mais parágrafos com os dados para solucionar o problema;
+   ​	a. Um parágrafo descrevendo o cenário da aplicação; **(FAZER)**
 
-   ​	c. Apresentação do diagrama de classes com a descrição dos atributos e métodos do sistema.
+   ​	b. Um ou mais parágrafos com os dados para solucionar o problema; **(FAZER)**
+
+   ​	c. Criação e apresentação do diagrama de classes com a descrição dos atributos e métodos do sistema. **(FAZER)**
 
 
 
 **Sobre o desenvolvimento do sistema:**
 
-1. Características básicas; **(FAZER)**
+1. Características básicas:
 
    a. Ser orientado a objetos;
 
@@ -36,15 +38,15 @@ O objetivo deste checkpoint é utilizar conceitos de orientação a objetos apre
 
    
 
-2. Tópicos da disciplina que deverão ser contemplados e que serão avaliados no projeto; **(FAZER)**
+2. Tópicos da disciplina que deverão ser contemplados e que serão avaliados no projeto:
 
-   a. Classes (atributos e métodos), Construtores, Encapsulamento; 
+   a. Classes (atributos e métodos), Construtores, Encapsulamento; **(FAZER)**
 
    ​	i: No mínimo 4 classes (Não considerando a classe principal com método main);
 
-   b. Implementar os conceitos de sobrecarga/sobreescrita (de métodos e construtores);
+   b. Implementar os conceitos de sobrecarga/sobreescrita (de métodos e construtores); **(FAZER)**
 
-   c. Implementar o conceito de herança, classe abstrata e/ou interface.
+   c. Implementar o conceito de herança, classe abstrata e/ou interface. **(FAZER)**
 
 
 
