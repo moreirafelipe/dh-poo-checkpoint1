@@ -10,7 +10,7 @@ O objetivo deste checkpoint é utilizar conceitos de orientação a objetos apre
 
 
 
-**ETAPAS**
+**REQUISITOS DO PROJETO -** **ETAPAS**:
 
 
 
