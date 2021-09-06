@@ -24,7 +24,7 @@ O objetivo deste checkpoint é utilizar conceitos de orientação a objetos apre
 
    ​	b. Um ou mais parágrafos com os dados para solucionar o problema; **(FAZER)**
 
-   ​	c. Criação e apresentação do diagrama de classes com a descrição dos atributos e métodos do sistema. **(FAZER)**
+   ​	c. Criação e apresentação do diagrama de classes com a descrição dos atributos e métodos do sistema. **(FEITO)**
 
 
 
