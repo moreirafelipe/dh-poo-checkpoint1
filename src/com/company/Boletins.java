@@ -15,6 +15,6 @@ public class Boletins {
 
     public void apresentarDados() {
 
-        System.out.println(disciplinas.nota);
+        System.out.println(disciplinas);
     }
 }
