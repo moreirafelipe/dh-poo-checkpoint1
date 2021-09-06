@@ -17,4 +17,17 @@ public class Boletins {
 
         System.out.println(disciplinas);
     }
+
+    public void adicionarDisciplinas(Disciplinas disciplina) {
+
+        disciplinas.add(disciplina); // add é o push do java;
+    }
+
+    @Override
+    public String toString() {
+        return "Boletins{" +
+                "periodo='" + periodo + '\'' +
+                ", disciplinas=" + disciplinas +
+                '}';
+    }
 }

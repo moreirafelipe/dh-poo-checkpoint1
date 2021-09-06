@@ -21,5 +21,8 @@ public class Alunos extends Pessoas {
         this.boletins = new ArrayList<>();
     }
 
+    public void consultarNota() {
 
+        System.out.println(boletins);
+    }
 }
