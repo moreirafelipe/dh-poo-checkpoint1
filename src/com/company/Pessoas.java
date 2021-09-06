@@ -16,4 +16,13 @@ public class Pessoas {
         this.categoria = categoria;
     }
 
+    @Override
+    public String toString() {
+        return "Dados do(a)" + this.categoria +
+                "Nome: '" + nome + '\'' +
+                ", Telefone='" + telefone + '\'' +
+                ", Data_de_nascimento=" + data_de_nascimento +
+                ", Categoria='" + categoria + '\'' +
+                '}';
+    }
 }

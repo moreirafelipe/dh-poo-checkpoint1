@@ -2,6 +2,8 @@ package com.company;
 
 import java.sql.SQLOutput;
 import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.Month;
 
 public class Main {
 
@@ -29,6 +31,28 @@ public class Main {
 
         System.out.println(primeiroBimestre);
         System.out.println(segundoBimestre);
+
+//        String nome, String telefone, LocalDate data_de_nascimento, String categoria, int id_professor
+//            , Disciplinas materia, String email, LocalTime entrada, LocalTime saida, Double valorHora
+        Professores prof1 = new Professores("Adolfo", "12988393939", LocalDate.of(1990, Month.SEPTEMBER, 06),
+                "Professor", 001, matematica, "adolfo@colegio.com.br", LocalTime.of(05,05,05), LocalTime.of(10,10,10)
+                , 50.00);
+
+        Professores prof2 = new Professores("Tania", "12988393940", LocalDate.of(1995, Month.AUGUST, 12),
+                "Professor", 002, geografia, "tania@colegio.com.br", LocalTime.of(10,10,10), LocalTime.of(18,18,18)
+                , 150.00);
+
+        prof1.adicionarTurmas(turma001);
+        prof1.adicionarTurmas(turma002);
+
+        prof2.adicionarTurmas(turma001);
+        prof2.adicionarTurmas(turma002);
+
+        System.out.println(prof1);
+        System.out.println(prof1.calcularSalario());
+
+        System.out.println(prof2);
+        System.out.println(prof2.calcularSalario());
     }
 
 }
