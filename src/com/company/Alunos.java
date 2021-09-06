@@ -20,4 +20,9 @@ public class Alunos extends Pessoas {
         this.turma = turma;
         this.boletins = new ArrayList<>();
     }
+
+    public void consultarNota() {
+
+        System.out.println(boletins);
+    }
 }
