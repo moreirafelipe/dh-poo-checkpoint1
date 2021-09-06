@@ -9,7 +9,7 @@ public class Alunos extends Pessoas {
     private String endereco;
     private Turmas turma;
     private Boletins boletim;
-    private ArrayList <Boletins> boletins = new ArrayList<>(); //instanciando um novo array que vai conter objetos do tipo Boletins;
+    private ArrayList <Boletins> boletins; //instanciando um novo array que vai conter objetos do tipo Boletins;
 
     // quando gera um construtor, ele surge com os atributos gerais da superclasse(pai); os atributos da subclasse(filho) devem ser adicionados após;
 
@@ -18,5 +18,6 @@ public class Alunos extends Pessoas {
 
         this.endereco = endereco;
         this.turma = turma;
+        this.boletins = new ArrayList<>();
     }
 }
