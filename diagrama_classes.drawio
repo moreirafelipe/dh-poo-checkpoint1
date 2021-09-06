@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-09-06T13:44:45.740Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36 Edg/93.0.961.38" etag="fw7J_ecqNj101M1ue8-P" version="15.0.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-06T14:02:21.629Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36 Edg/93.0.961.38" etag="bK5H_Mbe85MVLK0gv5BP" version="15.0.6" type="github">
   <diagram id="3gxOAMbR4RBR5quXN4Fo" name="Page-1">
-    <mxGraphModel dx="2903" dy="1234" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1865" dy="617" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -44,7 +44,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="QVgde0wYcYvtslcCwDm_-9" value="Professores" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="130" y="760" width="200" height="164" as="geometry" />
+          <mxGeometry x="180" y="760" width="200" height="164" as="geometry" />
         </mxCell>
         <mxCell id="QVgde0wYcYvtslcCwDm_-10" value="- id_professor: Int&#xa;- materia: String&#xa;- email: String&#xa;- entrada: Date&#xa;- saida: Date&#xa;- valorHora: Double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="QVgde0wYcYvtslcCwDm_-9" vertex="1">
           <mxGeometry y="26" width="200" height="104" as="geometry" />
@@ -71,16 +71,19 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="QVgde0wYcYvtslcCwDm_-17" value="Alunos" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="-110" y="760" width="200" height="124" as="geometry" />
+          <mxGeometry x="-170" y="760" width="200" height="208" as="geometry" />
         </mxCell>
-        <mxCell id="QVgde0wYcYvtslcCwDm_-18" value="- id_alunos: Int&#xa;- endereco: Enderecos&#xa;- turma: Turmas&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="QVgde0wYcYvtslcCwDm_-17" vertex="1">
-          <mxGeometry y="26" width="200" height="64" as="geometry" />
+        <mxCell id="nOvZRza75PGBeKDB9BoI-19" value="- id_alunos: Int&#xa;- endereco: Enderecos&#xa;- turma: Turmas&#xa;- boletin: Boletins&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="QVgde0wYcYvtslcCwDm_-17">
+          <mxGeometry y="26" width="200" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="QVgde0wYcYvtslcCwDm_-18" value="- id_alunos: Int&#xa;- endereco: Enderecos&#xa;- turma: Turmas&#xa;- boletin: Boletins&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="QVgde0wYcYvtslcCwDm_-17" vertex="1">
+          <mxGeometry y="100" width="200" height="74" as="geometry" />
         </mxCell>
         <mxCell id="QVgde0wYcYvtslcCwDm_-19" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="QVgde0wYcYvtslcCwDm_-17" vertex="1">
-          <mxGeometry y="90" width="200" height="8" as="geometry" />
+          <mxGeometry y="174" width="200" height="8" as="geometry" />
         </mxCell>
         <mxCell id="QVgde0wYcYvtslcCwDm_-20" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="QVgde0wYcYvtslcCwDm_-17" vertex="1">
-          <mxGeometry y="98" width="200" height="26" as="geometry" />
+          <mxGeometry y="182" width="200" height="26" as="geometry" />
         </mxCell>
         <mxCell id="QVgde0wYcYvtslcCwDm_-21" value="Enderecos" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="530" y="740" width="160" height="164" as="geometry" />
@@ -94,7 +97,7 @@
         <mxCell id="QVgde0wYcYvtslcCwDm_-24" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="QVgde0wYcYvtslcCwDm_-21" vertex="1">
           <mxGeometry y="138" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="nOvZRza75PGBeKDB9BoI-1" value="&lt;h1 align=&quot;left&quot;&gt;Diagrama de classes de um sistemas de cadastro para um colégio&lt;br&gt;&lt;/h1&gt;&lt;p align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;- Uma turma pode ter várias aulas, e uma aula, com horário e professor específico, só pode ser dada a uma turma (1 : n).&lt;/font&gt;&lt;/p&gt;&lt;p align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;- Uma turma tem vários professores, e um professor pode dar aulas em várias turmas (n : n).&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;- Uma turma está alocada em uma sala, e uma sala aloca diferentes turmas (em horários diferentes) (1 : n).&lt;/font&gt;&lt;/p&gt;&lt;p align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;- Um professor pode dar várias aulas, mas uma aula, com horário e turma específica, só pode ser dada por um professor (1 : n).&lt;/font&gt;&lt;/p&gt;&lt;p align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;- Um aluno pode estar em uma única turma, mas uma turma possui vários alunos (1 : n).&lt;/font&gt;&lt;/p&gt;&lt;p align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;- Um aluno possui um endereço, mas um endereço está vinculado a um único aluno (1 : 1).&lt;/font&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=#0e8088;fillColor=#b0e3e6;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=left;" vertex="1" parent="1">
+        <mxCell id="nOvZRza75PGBeKDB9BoI-1" value="&lt;h1 align=&quot;left&quot;&gt;Diagrama de classes de um sistemas de cadastro para um colégio&lt;br&gt;&lt;/h1&gt;&lt;p align=&quot;left&quot;&gt;&lt;span style=&quot;font-size: 18px&quot;&gt;&amp;nbsp;- Alunos possuem periodoLetivo, notasBimestrais e médiaSemestral, e podem consultar notas e médias bimestrais, semestrais e anuais&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;left&quot;&gt;&lt;span style=&quot;font-size: 18px&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;left&quot;&gt;&lt;span style=&quot;font-size: 18px&quot;&gt;- Boletins possuem: periodo, nota1, nota2, nota3, nota4&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=#0e8088;fillColor=#b0e3e6;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=left;" vertex="1" parent="1">
           <mxGeometry x="820" y="512" width="760" height="358" as="geometry" />
         </mxCell>
         <mxCell id="nOvZRza75PGBeKDB9BoI-7" value="Pessoas" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
@@ -108,6 +111,31 @@
         </mxCell>
         <mxCell id="nOvZRza75PGBeKDB9BoI-10" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="nOvZRza75PGBeKDB9BoI-7">
           <mxGeometry y="98" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="nOvZRza75PGBeKDB9BoI-13" value="Boletins" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-470" y="756" width="160" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="nOvZRza75PGBeKDB9BoI-14" value="- periodo: String&#xa;- faltas: int&#xa;- notas: ArrayList" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="nOvZRza75PGBeKDB9BoI-13">
+          <mxGeometry y="26" width="160" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="nOvZRza75PGBeKDB9BoI-15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="nOvZRza75PGBeKDB9BoI-13">
+          <mxGeometry y="80" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="nOvZRza75PGBeKDB9BoI-16" value="+ calcularMedia(): Double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="nOvZRza75PGBeKDB9BoI-13">
+          <mxGeometry y="88" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="nOvZRza75PGBeKDB9BoI-18" value="*" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;exitX=1.016;exitY=0.635;exitDx=0;exitDy=0;entryX=0.001;entryY=0.871;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="nOvZRza75PGBeKDB9BoI-14" target="nOvZRza75PGBeKDB9BoI-19">
+          <mxGeometry x="-0.8" relative="1" as="geometry">
+            <mxPoint x="-150" y="740" as="sourcePoint" />
+            <mxPoint x="10" y="740" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nOvZRza75PGBeKDB9BoI-21" value="*" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;" edge="1" parent="1" source="QVgde0wYcYvtslcCwDm_-17" target="QVgde0wYcYvtslcCwDm_-9">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry">
+            <mxPoint x="90" y="980" as="sourcePoint" />
+            <mxPoint x="250" y="980" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
