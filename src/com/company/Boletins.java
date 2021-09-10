@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Boletins {
 
     private String periodo;
-    private ArrayList <Disciplinas> disciplinas = new ArrayList<>();;
+    private ArrayList <Disciplinas> disciplinas =  new ArrayList<>();
 
     public Boletins(String periodo) {
 
@@ -20,9 +20,8 @@ public class Boletins {
 
     public void adicionarDisciplinas(Disciplinas disciplina) {
 
-        disciplinas.add(disciplina); // add é o push do java;
+        this.disciplinas.add(disciplina); // add é o push do java;
     }
-
 
     @Override
     public String toString() {
@@ -31,5 +30,4 @@ public class Boletins {
                 ", disciplinas=" + disciplinas +
                 '}';
     }
-
 }

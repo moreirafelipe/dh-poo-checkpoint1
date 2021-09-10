@@ -40,11 +40,11 @@ O objetivo deste checkpoint é utilizar conceitos de orientação a objetos apre
 
 2. Tópicos da disciplina que deverão ser contemplados e que serão avaliados no projeto:
 
-   a. Classes (atributos e métodos), Construtores, Encapsulamento; **(FAZER)**
+   a. Classes (atributos e métodos), Construtores, Encapsulamento; **(FEITO)**
 
    ​	i: No mínimo 4 classes (Não considerando a classe principal com método main);
 
-   b. Implementar os conceitos de sobrecarga/sobreescrita (de métodos e construtores); **(FAZER)**
+   b. Implementar os conceitos de sobrecarga/sobreescrita (de métodos e construtores); **(FEITO)**
 
    c. Implementar o conceito de herança, classe abstrata e/ou interface. **(FAZER)**
 
