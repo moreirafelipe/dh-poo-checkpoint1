@@ -7,6 +7,10 @@ public class Boletins {
     private String periodo;
     private ArrayList <Disciplinas> disciplinas =  new ArrayList<>();
 
+    public Boletins() {
+
+    }
+
     public Boletins(String periodo) {
 
         this.periodo = periodo;
@@ -23,6 +27,22 @@ public class Boletins {
         this.disciplinas.add(disciplina); // add é o push do java;
     }
 
+    public String getPeriodo() {
+        return periodo;
+    }
+
+    public void setPeriodo(String periodo) {
+        this.periodo = periodo;
+    }
+
+    public ArrayList<Disciplinas> getDisciplinas() {
+        return disciplinas;
+    }
+
+    public void setDisciplinas(Disciplinas disciplina) {
+        this.disciplinas.add(disciplina);
+    }
+
     @Override
     public String toString() {
         return "Boletins{" +
@@ -30,4 +50,5 @@ public class Boletins {
                 ", disciplinas=" + disciplinas +
                 '}';
     }
+
 }

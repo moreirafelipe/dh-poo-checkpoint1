@@ -12,4 +12,27 @@ public class Turmas {
         this.totalAlunos = totalAlunos;
     }
 
+    public int getId_turmas() {
+        return id_turmas;
+    }
+
+    public void setId_turmas(int id_turmas) {
+        this.id_turmas = id_turmas;
+    }
+
+    public Salas getSala() {
+        return sala;
+    }
+
+    public void setSala(Salas sala) {
+        this.sala = sala;
+    }
+
+    public int getTotalAlunos() {
+        return totalAlunos;
+    }
+
+    public void setTotalAlunos(int totalAlunos) {
+        this.totalAlunos = totalAlunos;
+    }
 }

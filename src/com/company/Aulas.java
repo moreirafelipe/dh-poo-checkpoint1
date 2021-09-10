@@ -17,4 +17,44 @@ public class Aulas {
         this.inicio = inicio;
         this.fim = fim;
     }
+
+    public int getId_aulas() {
+        return id_aulas;
+    }
+
+    public void setId_aulas(int id_aulas) {
+        this.id_aulas = id_aulas;
+    }
+
+    public Turmas getTurma() {
+        return turma;
+    }
+
+    public void setTurma(Turmas turma) {
+        this.turma = turma;
+    }
+
+    public Professores getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(Professores professor) {
+        this.professor = professor;
+    }
+
+    public LocalTime getInicio() {
+        return inicio;
+    }
+
+    public void setInicio(LocalTime inicio) {
+        this.inicio = inicio;
+    }
+
+    public LocalTime getFim() {
+        return fim;
+    }
+
+    public void setFim(LocalTime fim) {
+        this.fim = fim;
+    }
 }

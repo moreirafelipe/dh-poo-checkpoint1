@@ -25,4 +25,36 @@ public class Pessoas {
                 ", Categoria='" + categoria + '\'' +
                 '}';
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public LocalDate getData_de_nascimento() {
+        return data_de_nascimento;
+    }
+
+    public void setData_de_nascimento(LocalDate data_de_nascimento) {
+        this.data_de_nascimento = data_de_nascimento;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
 }

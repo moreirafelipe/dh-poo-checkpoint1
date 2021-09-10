@@ -59,4 +59,68 @@ public class Professores extends Pessoas {
                 ", aulas=" + aulas +
                 '}';
     }
+
+    public int getId_professor() {
+        return id_professor;
+    }
+
+    public void setId_professor(int id_professor) {
+        this.id_professor = id_professor;
+    }
+
+    public Disciplinas getMateria() {
+        return materia;
+    }
+
+    public void setMateria(Disciplinas materia) {
+        this.materia = materia;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public LocalTime getEntrada() {
+        return entrada;
+    }
+
+    public void setEntrada(LocalTime entrada) {
+        this.entrada = entrada;
+    }
+
+    public LocalTime getSaida() {
+        return saida;
+    }
+
+    public void setSaida(LocalTime saida) {
+        this.saida = saida;
+    }
+
+    public Double getValorHora() {
+        return valorHora;
+    }
+
+    public void setValorHora(Double valorHora) {
+        this.valorHora = valorHora;
+    }
+
+    public ArrayList<Turmas> getTurmas() {
+        return turmas;
+    }
+
+    public void setTurmas(ArrayList<Turmas> turmas) {
+        this.turmas = turmas;
+    }
+
+    public ArrayList<Aulas> getAulas() {
+        return aulas;
+    }
+
+    public void setAulas(ArrayList<Aulas> aulas) {
+        this.aulas = aulas;
+    }
 }
