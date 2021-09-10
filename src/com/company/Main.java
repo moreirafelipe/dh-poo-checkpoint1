@@ -8,8 +8,8 @@ import java.time.Month;
 public class Main {
 
     public static void main(String[] args) {
-/*
-        Salas sala01 = new Salas(1, "sim");
+
+        /*Salas sala01 = new Salas(1, "sim");
         Salas sala02 = new Salas(2, "sim");
 
         Turmas turma001 = new Turmas(1, sala01, 30);
@@ -32,8 +32,8 @@ public class Main {
         System.out.println(primeiroBimestre);
         System.out.println(segundoBimestre);
 
-//        String nome, String telefone, LocalDate data_de_nascimento, String categoria, int id_professor
-//            , Disciplinas materia, String email, LocalTime entrada, LocalTime saida, Double valorHora
+      String nome, String telefone, LocalDate data_de_nascimento, String categoria, int id_professor
+          , Disciplinas materia, String email, LocalTime entrada, LocalTime saida, Double valorHora
         Professores prof1 = new Professores("Adolfo", "12988393939", LocalDate.of(1990, 9, 06),
                 "Professor", 001, matematica, "adolfo@colegio.com.br", LocalTime.of(05,05,05), LocalTime.of(10,10,10)
                 , 50.00);
@@ -52,7 +52,12 @@ public class Main {
         System.out.println(prof1.calcularSalario());
 
         System.out.println(prof2);
-        System.out.println(prof2.calcularSalario());
+        System.out.println(prof2.calcularSalario());*/
+
+        Menu menu = new Menu();
+
+        menu.inicio();
     }
+
 
 }

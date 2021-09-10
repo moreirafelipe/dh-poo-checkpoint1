@@ -7,6 +7,10 @@ public class Boletins {
     private String periodo;
     private ArrayList <Disciplinas> disciplinas =  new ArrayList<>();
 
+    public Boletins() {
+
+    }
+
     public Boletins(String periodo) {
 
         this.periodo = periodo;
@@ -35,8 +39,8 @@ public class Boletins {
         return disciplinas;
     }
 
-    public void setDisciplinas(ArrayList<Disciplinas> disciplinas) {
-        this.disciplinas = disciplinas;
+    public void setDisciplinas(Disciplinas disciplina) {
+        this.disciplinas.add(disciplina);
     }
 
     @Override
@@ -46,4 +50,5 @@ public class Boletins {
                 ", disciplinas=" + disciplinas +
                 '}';
     }
+
 }

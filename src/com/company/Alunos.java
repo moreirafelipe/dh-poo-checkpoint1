@@ -25,4 +25,44 @@ public class Alunos extends Pessoas {
 
         System.out.println(boletins);
     }
+
+    public int getId_alunos() {
+        return id_alunos;
+    }
+
+    public void setId_alunos(int id_alunos) {
+        this.id_alunos = id_alunos;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public Turmas getTurma() {
+        return turma;
+    }
+
+    public void setTurma(Turmas turma) {
+        this.turma = turma;
+    }
+
+    public Boletins getBoletim() {
+        return boletim;
+    }
+
+    public void setBoletim(Boletins boletim) {
+        this.boletim = boletim;
+    }
+
+    public ArrayList<Boletins> getBoletins() {
+        return boletins;
+    }
+
+    public void setBoletins(ArrayList<Boletins> boletins) {
+        this.boletins = boletins;
+    }
 }
