@@ -21,4 +21,20 @@ public class Disciplinas {
                 ", falta=" + falta +
                 '}';
     }
+
+    public Double getNota() {
+        return nota;
+    }
+
+    public void setNota(Double nota) {
+        this.nota = nota;
+    }
+
+    public int getFalta() {
+        return falta;
+    }
+
+    public void setFalta(int falta) {
+        this.falta = falta;
+    }
 }
