@@ -23,6 +23,22 @@ public class Boletins {
         this.disciplinas.add(disciplina); // add é o push do java;
     }
 
+    public String getPeriodo() {
+        return periodo;
+    }
+
+    public void setPeriodo(String periodo) {
+        this.periodo = periodo;
+    }
+
+    public ArrayList<Disciplinas> getDisciplinas() {
+        return disciplinas;
+    }
+
+    public void setDisciplinas(ArrayList<Disciplinas> disciplinas) {
+        this.disciplinas = disciplinas;
+    }
+
     @Override
     public String toString() {
         return "Boletins{" +

@@ -8,7 +8,7 @@ import java.time.Month;
 public class Main {
 
     public static void main(String[] args) {
-
+/*
         Salas sala01 = new Salas(1, "sim");
         Salas sala02 = new Salas(2, "sim");
 
