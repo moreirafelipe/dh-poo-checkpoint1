@@ -7,11 +7,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Salas sala01 = new Salas(01, "sim");
-        Salas sala02 = new Salas(02, "sim");
+        Salas sala01 = new Salas(1, "sim");
+        Salas sala02 = new Salas(2, "sim");
 
-        Turmas turma001 = new Turmas(001, sala01, 30);
-        Turmas turma002 = new Turmas(002, sala02, 27);
+        Turmas turma001 = new Turmas(1, sala01, 30);
+        Turmas turma002 = new Turmas(2, sala02, 27);
 
         Alunos aluno1 = new Alunos("Maria", "485556854", LocalDate.of(1990,02,28), "aluno", "rua das camélias", turma001);
         Alunos aluno2 = new Alunos("Ana", "4855564564", LocalDate.of(1992,07,25), "aluno", "rua das margarida", turma002);
