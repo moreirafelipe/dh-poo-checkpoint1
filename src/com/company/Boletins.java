@@ -1,15 +1,13 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Boletins {
 
     private String periodo;
-    private ArrayList <Disciplinas> disciplinas =  new ArrayList<>();
-
-    public Boletins() {
-
-    }
+//    private ArrayList <Disciplinas> disciplinas =  new ArrayList<>();
+    private HashMap<String, Disciplinas> disciplinas = new HashMap<String, Disciplinas>();
 
     public Boletins(String periodo) {
 
@@ -22,9 +20,15 @@ public class Boletins {
         System.out.println(disciplinas);
     }
 
-    public void adicionarDisciplinas(Disciplinas disciplina) {
+    public void adicionarDisciplinas(String nomeDisciplina) {
 
-        this.disciplinas.add(disciplina); // add é o push do java;
+        this.disciplinas.put(nomeDisciplina, new Disciplinas(nomeDisciplina));
+        System.out.println("Disciplina adicionada!");
+        System.out.println(disciplinas);
+    }
+
+    public void consultarDisciplinas(String nomeDisciplina) {
+        System.out.println("Consulta: " + this.disciplinas.get(nomeDisciplina));
     }
 
     public String getPeriodo() {
@@ -33,14 +37,6 @@ public class Boletins {
 
     public void setPeriodo(String periodo) {
         this.periodo = periodo;
-    }
-
-    public ArrayList<Disciplinas> getDisciplinas() {
-        return disciplinas;
-    }
-
-    public void setDisciplinas(Disciplinas disciplina) {
-        this.disciplinas.add(disciplina);
     }
 
     @Override

@@ -4,10 +4,63 @@ import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Month;
+import java.util.HashMap;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+
+//        HashMap<String, Disciplinas> disciplinas = new HashMap<String, Disciplinas>();
+//        Disciplinas disciplina1 = new Disciplinas("Portugues");
+//        Disciplinas disciplina2 = new Disciplinas("Matemática");
+//        Disciplinas disciplina3 = new Disciplinas("Ciências");
+//        Disciplinas disciplina4 = new Disciplinas("História");
+
+        Boletins boletim = new Boletins("1Bim");
+
+        int opcao;
+
+        Scanner ler = new Scanner(System.in); //gerando leitor de entrada de input
+
+        System.out.println("--------------------------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------------------");
+
+        System.out.println("\nSeja bem-vindo ao sistema de gestão escolar - SIGESC\n");
+
+        System.out.println("--------------------------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------------------");
+        System.out.println("1 - Cadastrar disciplinas");
+        System.out.println("2 - Consultar disciplinas");
+        System.out.println("3 - Sair");
+        System.out.println("Digite a sua escolha:");
+        opcao = ler.nextInt();
+
+        while(opcao != 3) {
+
+            switch (opcao) {
+                case 1: boletim.adicionarDisciplinas("Portugues");
+                    break;
+                case 2: boletim.consultarDisciplinas("Portugues");
+                    break;
+            }
+
+            System.out.println("--------------------------------------------------------------------------------------");
+            System.out.println("--------------------------------------------------------------------------------------");
+
+            System.out.println("\nSeja bem-vindo ao sistema de gestão escolar - SIGESC\n");
+
+            System.out.println("--------------------------------------------------------------------------------------");
+            System.out.println("--------------------------------------------------------------------------------------");
+            System.out.println("1 - Cadastrar disciplinas");
+            System.out.println("2 - Consultar disciplinas");
+            System.out.println("3 - Sair");
+            System.out.println("Digite a sua escolha:");
+            opcao = ler.nextInt();
+
+        }
+
+
 
         /*Salas sala01 = new Salas(1, "sim");
         Salas sala02 = new Salas(2, "sim");
@@ -54,10 +107,5 @@ public class Main {
         System.out.println(prof2);
         System.out.println(prof2.calcularSalario());*/
 
-        Menu menu = new Menu();
-
-        menu.inicio();
     }
-
-
 }
