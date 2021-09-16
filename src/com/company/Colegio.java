@@ -9,6 +9,7 @@ public class Colegio {
     HashMap<Integer, Aluno> alunos = new HashMap<Integer, Aluno>();
     HashMap<Integer, Professor> professores = new HashMap<Integer, Professor>();
     HashMap<Integer, Turma> turmas = new HashMap<Integer, Turma>();
+    HashMap<Integer, String> disciplinas = new HashMap<Integer,String>();
 
     Scanner ler = new Scanner(System.in);
 
@@ -35,18 +36,32 @@ public class Colegio {
     public void cadastrarProfessores(){
         short opcao = 0;
 
+        disciplinas.put(01, "Portugues");
+        disciplinas.put(02, "Matematica");
+        disciplinas.put(03, "Ciencias");
+        disciplinas.put(04, "Historia");
+
         do {
             Integer idProfessor = professores.size() + 1;
 
             System.out.println("Digite o nome do professor a ser cadastrado: ");
             String nomeProfessor = ler.next();
 
-            System.out.println("Digite a disciplina que lecionará: ");
-            String disciplinaProfessor = ler.next();
+            System.out.println("Digite o ID da disciplina que lecionará: ");
+            Integer escolha = ler.nextInt();
 
-            professores.put(idProfessor, new Professor(idProfessor, nomeProfessor, new Disciplina(disciplinaProfessor)));
-            System.out.println("Professor cadastrado com sucesso!");
+            String idRetornado = disciplinas.get(escolha);
 
+            if(idRetornado == null) {
+
+                System.out.println("Disciplina não encontrada!");
+
+            } else {
+
+                professores.put(idProfessor, new Professor(idProfessor, nomeProfessor, idRetornado));
+                System.out.println("Professor cadastrado com sucesso!");
+
+            }
             //navegar entre menus
             System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
             opcao = ler.nextShort();

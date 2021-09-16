@@ -50,4 +50,7 @@ public class Boletim {
         return periodo;
     }
 
+    public HashMap<Integer, Disciplina> getDisciplinas() {
+        return disciplinas;
+    }
 }
