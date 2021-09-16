@@ -47,19 +47,26 @@ public class Colegio {
             System.out.println("Digite o nome do professor a ser cadastrado: ");
             String nomeProfessor = ler.next();
 
-            System.out.println("Digite o ID da disciplina que lecionará: ");
+
+            System.out.println("Disciplinas disponíveis: ");
+
+            for (Map.Entry<Integer, String> disciplina : disciplinas.entrySet()) {
+                System.out.println("ID: " + disciplina.getKey() + " | Disciplina: " + disciplina.getValue());
+            }
+
+            System.out.print("\nDigite um ID válido para atribuir uma disciplina ao(à) professor(a): ");
             Integer escolha = ler.nextInt();
 
             String idRetornado = disciplinas.get(escolha);
 
             if(idRetornado == null) {
 
-                System.out.println("Disciplina não encontrada!");
+                System.out.println("\nDisciplina não encontrada!");
 
             } else {
 
                 professores.put(idProfessor, new Professor(idProfessor, nomeProfessor, idRetornado));
-                System.out.println("Professor cadastrado com sucesso!");
+                System.out.println("\nProfessor cadastrado com sucesso!");
 
             }
             //navegar entre menus
