@@ -26,27 +26,7 @@ public class Menu {
     }
 
     //opcao1
-//    public void cadastrarDisciplinas(){
-//        System.out.println("Digite o nome da disciplina a ser cadastrada: ");
-//        opcao = ler.next();
-//
-////        boletim.adicionarDisciplinas(01, );
-//    }
-
-    //opcao2
-//    public void consultarDisciplinas(){
-//        System.out.println("Digite o nome da disciplina a ser consultada: ");
-//        opcao = ler.next();
-//        boletim.consultarDisciplinas(opcao);
-//    }
-
-    //opcao1
     public void cadastrarAlunos(){
-
-        Disciplina d1 = new Disciplina("Portugues");
-        Disciplina d2 = new Disciplina("Matematica");
-        Disciplina d3 = new Disciplina("Ciencias");
-        Disciplina d4 = new Disciplina("Historia");
 
         System.out.println("Digite o nome do aluno a ser cadastrado: ");
         String nomeAluno = ler.next();
@@ -54,7 +34,7 @@ public class Menu {
         System.out.println("Digite o id do aluno: ");
         Integer idAluno = ler.nextInt();
 
-        alunos.put(idAluno, new Aluno( nomeAluno, idAluno, new Boletim("1Bim", d1, d2, d3, d4)));
+        alunos.put(idAluno, new Aluno( nomeAluno, idAluno, new Boletim("1Bim")));
 
         System.out.println("Aluno(a) cadastrado(a) com sucesso!");
     }

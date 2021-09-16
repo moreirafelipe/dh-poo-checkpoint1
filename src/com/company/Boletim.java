@@ -12,18 +12,12 @@ public class Boletim {
     private HashMap<Integer, Disciplina> disciplinas = new HashMap<Integer, Disciplina>();
 
     public Boletim(String periodo) {
-        this.periodo = periodo;
-        this.disciplinas = disciplinas;
-    }
-
-    public Boletim(String periodo, Disciplina disciplina1, Disciplina disciplina2, Disciplina disciplina3,
-                    Disciplina disciplina4) {
 
         this.periodo = periodo;
-        this.disciplinas.put(01, disciplina1);
-        this.disciplinas.put(02, disciplina2);
-        this.disciplinas.put(03, disciplina3);
-        this.disciplinas.put(04, disciplina4);
+        this.disciplinas.put(01, new Disciplina("Portugues"));
+        this.disciplinas.put(02, new Disciplina("Matematica"));
+        this.disciplinas.put(03, new Disciplina("Ciencias"));
+        this.disciplinas.put(04, new Disciplina("Historia"));
 
     }
 
