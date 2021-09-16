@@ -27,7 +27,7 @@ public class Colegio {
             System.out.println("Aluno(a) cadastrado(a) com sucesso!");
 
             //navegar entre menus
-            System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+            System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
             opcao = ler.nextShort();
         } while(opcao == 1);
     }
@@ -48,7 +48,7 @@ public class Colegio {
             System.out.println("Professor cadastrado com sucesso!");
 
             //navegar entre menus
-            System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+            System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
             opcao = ler.nextShort();
 
         } while(opcao == 1);
@@ -70,7 +70,7 @@ public class Colegio {
                 resultado.cadastrarMedias();
 
                 //navegar entre menus
-                System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+                System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
                 opcao = ler.nextShort();
 
             } while(opcao == 1);
@@ -95,7 +95,7 @@ public class Colegio {
                 resultado.cadastrarFaltas();
 
                 //navegar entre menus
-                System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+                System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
                 opcao = ler.nextShort();
 
             } while(opcao == 1);
@@ -136,7 +136,7 @@ public class Colegio {
                 aluno.mostrarDados();
 
                 //navegar entre menus
-                System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+                System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
                 opcao = ler.nextShort();
 
             } while(opcao == 1);
@@ -153,7 +153,7 @@ public class Colegio {
                 professor.mostrarDados();
 
                 //navegar entre menus
-                System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+                System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
                 opcao = ler.nextShort();
 
             } while(opcao == 1);
@@ -177,7 +177,7 @@ public class Colegio {
                 }
 
                 //navegar entre menus
-                System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+                System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
                 opcao = ler.nextShort();
 
             } while(opcao == 1);
@@ -211,7 +211,7 @@ public class Colegio {
                 System.out.println("Dados atualizados com sucesso!");
 
                 //navegar entre menus
-                System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+                System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
                 opcao = ler.nextShort();
 
             } while(opcao == 1);
@@ -233,7 +233,7 @@ public class Colegio {
                 System.out.println("Dados atualizados com sucesso!");
 
                 //navegar entre menus
-                System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+                System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
                 opcao = ler.nextShort();
 
             } while(opcao == 1);
@@ -267,7 +267,7 @@ public class Colegio {
                 aluno.atribuirTurmas(turma);
 
                 //navegar entre menus
-                System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+                System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
                 opcao = ler.nextShort();
 
             } while(opcao == 1);
@@ -291,7 +291,7 @@ public class Colegio {
                 professor.atribuirTurmas(turma);
 
                 //navegar entre menus
-                System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+                System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
                 opcao = ler.nextShort();
 
             } while(opcao == 1);
