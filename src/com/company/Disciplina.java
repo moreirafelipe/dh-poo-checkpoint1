@@ -17,10 +17,16 @@ public class Disciplina {
     }
 
     public void mostrarDados(){
-        System.out.println("\n---------Dados da disciplina" + getNome() +  "--------\n");
-        System.out.println("Nome da disciplina: " + getNome());
-        System.out.println("Média: " + this.getNota());
-        System.out.println("Faltas: " + this.getFalta());
+
+        if(this.getNota() != null) {
+            System.out.println("\n--------- Disciplina " + getNome() +  "--------\n");
+            System.out.println("Nome da disciplina: " + getNome());
+            System.out.println("Média: " + this.getNota());
+            System.out.println("Faltas: " + this.getFalta());
+        } else {
+
+            System.out.println("Não há notas cadastradas para a disciplina de " + getNome());
+        }
     }
 
     @Override

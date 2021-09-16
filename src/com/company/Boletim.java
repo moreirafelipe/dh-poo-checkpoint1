@@ -29,7 +29,7 @@ public class Boletim {
         if(disciplinas.size() != 0) {
 
             for (Map.Entry<Integer, Disciplina> disciplina : disciplinas.entrySet()) {
-                System.out.println(disciplina);
+                disciplina.getValue().mostrarDados();
             }
 
         } else {
