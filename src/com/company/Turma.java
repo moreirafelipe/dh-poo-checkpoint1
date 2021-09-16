@@ -14,6 +14,10 @@ public class Turma {
     }
 
     public int getId_turmas() {
+
+        if(id_turmas == 0) {
+            System.out.println("Não há turmas cadastradas!");
+        }
         return id_turmas;
     }
 

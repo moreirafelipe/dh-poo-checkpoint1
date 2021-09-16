@@ -20,7 +20,12 @@ public class Aluno extends Pessoa {
         System.out.println("\n---------Dados do(a) aluno(a)--------\n");
         System.out.println("ID: " + this.getId_alunos());
         System.out.println("Nome: " + this.getNome());
-        System.out.println("Turma: " + this.getTurma().getId_turmas());
+
+        if(this.getTurma() == null){
+            System.out.println("Sem turmas cadastradas!");
+        } else {
+            System.out.println("Turma: " + this.turma.getId_turmas());
+        }
 
         this.boletim.mostrarDados();
     }
@@ -56,6 +61,13 @@ public class Aluno extends Pessoa {
     }
 
     @Override
+    public void atribuirTurmas(Turma turma) {
+
+        this.turma = turma;
+        System.out.println("Turma atribuida com sucesso!");
+    }
+
+    @Override
     public void setNome(String nome) {
         super.setNome(nome);
     }
@@ -64,23 +76,8 @@ public class Aluno extends Pessoa {
         return id_alunos;
     }
 
-
     public Turma getTurma() {
         return turma;
     }
 
-    public void setTurma(Turma turma) {
-
-        this.turma = turma;
-
-        System.out.println("Turma atribuida com sucesso!");
-    }
-
-    public Boletim getBoletim() {
-        return boletim;
-    }
-
-    public void setBoletim(Boletim boletim) {
-        this.boletim = boletim;
-    }
 }

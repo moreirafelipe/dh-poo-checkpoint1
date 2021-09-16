@@ -36,11 +36,6 @@ public class Boletim {
         }
     }
 
-    public void consultarDisciplina(String nomeDisciplina) {
-        Disciplina resultado = this.disciplinas.get(nomeDisciplina);
-        resultado.mostrarDados();
-    }
-
     public void definirMedias(Integer id, Double nota) {
         Disciplina resultado = this.disciplinas.get(id);
         resultado.setNota(nota);
@@ -55,13 +50,4 @@ public class Boletim {
         return periodo;
     }
 
-    public void setPeriodo(String periodo) {
-        this.periodo = periodo;
-    }
-
-    @Override
-    public String toString() {
-        return  "\nPeriodo: " + periodo +
-                "\nDisciplina: \n" + disciplinas;
-    }
 }

@@ -9,9 +9,10 @@ public class Professor extends Pessoa {
     private Disciplina disciplina;
     private ArrayList<Turma> turmas = new ArrayList<>();
 
-    public Professor(String nome, int id_professor) {
+    public Professor( int id_professor, String nome, Disciplina disciplina) {
         super(nome);
         this.id_professor = id_professor;
+        this.disciplina = disciplina;
         this.turmas = turmas;
     }
 
@@ -30,7 +31,7 @@ public class Professor extends Pessoa {
         System.out.println("\nDados do professor: " +
                 "\nID do(a) professor(a): " + id_professor +
                 "\nNome: " + this.getNome() +
-                "\nDisciplina: " + this.getDisciplina());
+                "\nDisciplina: " + this.getDisciplina().getNome());
 
         if(turmas.size() != 0) {
             for(Turma turma: turmas){
@@ -45,8 +46,7 @@ public class Professor extends Pessoa {
     public void atribuirTurmas(Turma turma) {
 
         this.turmas.add(turma);
-
-        System.out.println("Turma adicionada com sucesso!");
+        System.out.println("Turma atribuida com sucesso!");
     }
 
     @Override
@@ -54,27 +54,7 @@ public class Professor extends Pessoa {
         super.setNome(nome);
     }
 
-    public int getId_professor() {
-        return id_professor;
-    }
-
-    public void setId_professor(int id_professor) {
-        this.id_professor = id_professor;
-    }
-
     public Disciplina getDisciplina() {
         return disciplina;
-    }
-
-    public void setDisciplina(Disciplina disciplina) {
-        this.disciplina = disciplina;
-    }
-
-    public ArrayList<Turma> getTurmas() {
-        return turmas;
-    }
-
-    public void setTurmas(ArrayList<Turma> turmas) {
-        this.turmas = turmas;
     }
 }

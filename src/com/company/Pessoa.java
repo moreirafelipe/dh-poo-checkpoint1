@@ -10,6 +10,7 @@ public abstract class Pessoa {
         this.nome = nome;
     }
 
+    public abstract void atribuirTurmas(Turma turma);
 
     @Override
     public String toString() {

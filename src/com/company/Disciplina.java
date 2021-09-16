@@ -10,12 +10,6 @@ public class Disciplina {
         this.nome = nome;
     }
 
-    public Disciplina(String nome, Double nota, int falta) {
-        this.nome = nome;
-        this.nota = nota;
-        this.falta = falta;
-    }
-
     public void mostrarDados(){
 
         if(this.getNota() != null || this.getFalta() != 0) {
@@ -27,15 +21,6 @@ public class Disciplina {
 
             System.out.println("Não há dados cadastrados para a disciplina de " + getNome());
         }
-    }
-
-    @Override
-    public String toString() {
-    return      "\n" +
-                "\nNome: " + nome +
-                "\nNota: " + nota +
-                "\nFaltas: " + falta +
-                "\n";
     }
 
     public String getNome() {

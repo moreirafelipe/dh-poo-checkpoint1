@@ -41,7 +41,10 @@ public class Colegio {
             System.out.println("Digite o nome do professor a ser cadastrado: ");
             String nomeProfessor = ler.next();
 
-            professores.put(idProfessor, new Professor(nomeProfessor, idProfessor));
+            System.out.println("Digite a disciplina que lecionará: ");
+            String disciplinaProfessor = ler.next();
+
+            professores.put(idProfessor, new Professor(idProfessor, nomeProfessor, new Disciplina(disciplinaProfessor)));
             System.out.println("Professor cadastrado com sucesso!");
 
             //navegar entre menus
@@ -162,7 +165,6 @@ public class Colegio {
     }
 
     //opcao7
-
     public void relatorioGeral() {
 
         if(alunos.size() != 0) {
@@ -185,6 +187,7 @@ public class Colegio {
         }
     }
 
+    //opcao8
     public void atualizarDados(){
 
         System.out.println("Digite 1 para atualizar dados de alunos ou 2 para dados de professores:");
@@ -241,6 +244,7 @@ public class Colegio {
         }
     }
 
+    //opcao 6
     public void atribuirTurmas(){
 
         System.out.println("Digite 1 para atribuir turmas a alunos ou 2 para professores:");
@@ -260,7 +264,7 @@ public class Colegio {
                 Integer idTurma = ler.nextInt();
                 Turma turma = turmas.get(idConsulta);
 
-                aluno.setTurma(turma);
+                aluno.atribuirTurmas(turma);
 
                 //navegar entre menus
                 System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
