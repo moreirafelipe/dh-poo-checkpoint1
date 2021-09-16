@@ -7,7 +7,6 @@ public class Professor extends Pessoa {
 
     private int id_professor;
     private Disciplina disciplina;
-    private String email;
     private ArrayList<Turma> turmas = new ArrayList<>();
 
     public Professor(String nome, int id_professor) {
@@ -16,12 +15,11 @@ public class Professor extends Pessoa {
         this.turmas = turmas;
     }
 
-    public Professor(String nome, String telefone, LocalDate data_de_nascimento, int id_professor
-            , Disciplina disciplina, String email) {
-        super(nome, telefone, data_de_nascimento);
+    public Professor(String nome, int id_professor
+            , Disciplina disciplina) {
+        super(nome);
         this.id_professor = id_professor;
         this.disciplina = disciplina;
-        this.email = email;
         this.turmas = turmas;
     }
 
@@ -34,7 +32,6 @@ public class Professor extends Pessoa {
         System.out.println("\nDados do professor: " +
                 "\nID do(a) professor(a): " + id_professor +
                 "\nNome: " + this.getNome() +
-                "\nEmail: " + this.getEmail() +
                 "\nTurma: " + this.getTurmas() +
                 "\nDisciplina: " + this.getDisciplina());
 
@@ -53,7 +50,6 @@ public class Professor extends Pessoa {
         return "\nDados do professor: " +
                 "\nID do(a) professor(a): " + id_professor +
                 "\nNome: " + this.getNome() +
-                "\nEmail: " + this.getEmail() +
                 "\nTurma: " + this.getTurmas() +
                 "\nDisciplina: " + this.getDisciplina();
     }
@@ -72,14 +68,6 @@ public class Professor extends Pessoa {
 
     public void setDisciplina(Disciplina disciplina) {
         this.disciplina = disciplina;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public ArrayList<Turma> getTurmas() {

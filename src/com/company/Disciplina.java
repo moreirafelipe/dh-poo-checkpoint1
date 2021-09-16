@@ -18,7 +18,7 @@ public class Disciplina {
 
     public void mostrarDados(){
 
-        if(this.getNota() != null && this.getFalta() != 0) {
+        if(this.getNota() != null || this.getFalta() != 0) {
             System.out.println("\n--------- Disciplina " + getNome() +  "--------\n");
             System.out.println("Nome da disciplina: " + getNome());
             System.out.println("Média: " + this.getNota());

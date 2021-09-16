@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class Boletim {
 
     private String periodo;
-//    private ArrayList <Disciplinas> disciplinas =  new ArrayList<>();
     private HashMap<Integer, Disciplina> disciplinas = new HashMap<Integer, Disciplina>();
 
     public Boletim(String periodo) {
@@ -18,7 +17,6 @@ public class Boletim {
         this.disciplinas.put(02, new Disciplina("Matematica"));
         this.disciplinas.put(03, new Disciplina("Ciencias"));
         this.disciplinas.put(04, new Disciplina("Historia"));
-
     }
 
     //Mostrar relatorio de notas

@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Aluno extends Pessoa {
 
     private int id_alunos;
-    private String endereco;
     private Turma turma;
     private Boletim boletim;
 
@@ -17,20 +16,10 @@ public class Aluno extends Pessoa {
         this.boletim = boletim; //boletim não pode ser em arrays
     }
 
-    public Aluno(String nome, String telefone, LocalDate data_de_nascimento, String endereco, Turma turma,
-                  Boletim boletim) {
-        //Turmas serão em arrays
-        super(nome, telefone, data_de_nascimento);
-        this.endereco = endereco;
-        this.turma = turma;
-        this.boletim = boletim;
-    }
-
     public void mostrarDados(){
         System.out.println("\n---------Dados do(a) aluno(a)--------\n");
         System.out.println("ID: " + this.getId_alunos());
         System.out.println("Nome: " + this.getNome());
-        System.out.println("Endereço: " + this.getEndereco());
         System.out.println("Turma: " + this.getTurma());
 
         this.boletim.mostrarDados();
@@ -76,17 +65,6 @@ public class Aluno extends Pessoa {
         return id_alunos;
     }
 
-    public void setId_alunos(int id_alunos) {
-        this.id_alunos = id_alunos;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
 
     public Turma getTurma() {
         return turma;

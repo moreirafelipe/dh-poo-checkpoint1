@@ -28,61 +28,66 @@ public class Menu {
 
     //opcao1
     public void cadastrarAlunos(){
+        short opcao = 0;
 
-        Menu menu = new Menu();
+        do {
+            Integer idAluno = alunos.size() + 1;
 
-        Integer idAluno = alunos.size() + 1;
+            System.out.println("Digite o nome do aluno a ser cadastrado: ");
+            String nomeAluno = ler.next();
 
-        System.out.println("Digite o nome do aluno a ser cadastrado: ");
-        String nomeAluno = ler.next();
+            alunos.put(idAluno, new Aluno(nomeAluno, idAluno, new Boletim("1Bim")));
 
-        alunos.put(idAluno, new Aluno( nomeAluno, idAluno, new Boletim("1Bim")));
+            System.out.println("Aluno(a) cadastrado(a) com sucesso!");
 
-        System.out.println("Aluno(a) cadastrado(a) com sucesso!");
-
-        //navegar entre menus
-        System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
-        short opcao = ler.nextShort();
-
-        if (opcao == 1) menu.cadastrarAlunos(); else menu.inicio();
+            //navegar entre menus
+            System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+            opcao = ler.nextShort();
+        } while(opcao == 1);
     }
 
     //opcao2
     public void cadastrarProfessores(){
-        Menu menu = new Menu();
+        short opcao = 0;
 
-        Integer idProfessor = professores.size() + 1;
+        do {
+            Integer idProfessor = professores.size() + 1;
 
-        System.out.println("Digite o nome do professor a ser cadastrado: ");
-        String nomeProfessor = ler.next();
+            System.out.println("Digite o nome do professor a ser cadastrado: ");
+            String nomeProfessor = ler.next();
 
-        professores.put(idProfessor, new Professor(nomeProfessor, idProfessor));
-        System.out.println("Professor cadastrado com sucesso!");
+            professores.put(idProfessor, new Professor(nomeProfessor, idProfessor));
+            System.out.println("Professor cadastrado com sucesso!");
 
-        //navegar entre menus
-        System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
-        short opcao = ler.nextShort();
 
-        if (opcao == 1) menu.cadastrarProfessores(); else menu.inicio();
+
+            //navegar entre menus
+            System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+            opcao = ler.nextShort();
+
+        } while(opcao == 1);
     }
 
     //opcao3
     public void cadastrarMedias(){
-        Menu menu = new Menu();
 
         if(alunos.size() != 0) {
-            System.out.println("Digite o ID do(a) aluno(a): ");
-            Integer escolha = ler.nextInt();
 
-            Aluno resultado = alunos.get(escolha);
+            short opcao = 0;
 
-            resultado.cadastrarMedias();
+            do{
+                System.out.println("Digite o ID do(a) aluno(a): ");
+                Integer escolha = ler.nextInt();
 
-            //navegar entre menus
-            System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
-            short opcao = ler.nextShort();
+                Aluno resultado = alunos.get(escolha);
 
-            if (opcao == 1) menu.cadastrarMedias(); else menu.inicio();
+                resultado.cadastrarMedias();
+
+                //navegar entre menus
+                System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+                opcao = ler.nextShort();
+
+            } while(opcao == 1);
 
         } else {
             System.out.println("Há " + alunos.size() + " alunos cadastrados. Cadastre alunos para incluir dados!");
@@ -91,22 +96,25 @@ public class Menu {
 
     //opcao4
     public void cadastrarFaltas(){
-        Menu menu = new Menu();
+
 
         if(alunos.size() != 0) {
 
-            System.out.println("Digite o ID do(a) aluno(a):");
-            Integer escolha = ler.nextInt();
+            short opcao = 0;
 
-            Aluno resultado = alunos.get(escolha);
+            do {
+                System.out.println("Digite o ID do(a) aluno(a):");
+                Integer escolha = ler.nextInt();
 
-            resultado.cadastrarFaltas();
+                Aluno resultado = alunos.get(escolha);
 
-            //navegar entre menus
-            System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
-            short opcao = ler.nextShort();
+                resultado.cadastrarFaltas();
 
-            if (opcao == 1) menu.cadastrarFaltas(); else menu.inicio();
+                //navegar entre menus
+                System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+                opcao = ler.nextShort();
+
+            } while(opcao == 1);
 
         } else {
             System.out.println("Há " + alunos.size() + " alunos cadastrados. Cadastre alunos para incluir dados!");
@@ -120,37 +128,44 @@ public class Menu {
 
     //opcao6
     public void consultarDados(){
-        Menu menu = new Menu();
 
         System.out.println("Digite 1 para consultar dados de alunos ou 2 para dados de professores?");
         short escolha = ler.nextShort();
 
         if(escolha == 1 && alunos.size() != 0) {
 
-            System.out.println("Digite o id do aluno a ser consultado: ");
-            Integer idConsulta = ler.nextInt();
+            short opcao = 0;
 
-            Aluno aluno = alunos.get(idConsulta);
-            aluno.mostrarDados();
+            do {
 
-            //navegar entre menus
-            System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
-            short opcao = ler.nextShort();
+                System.out.println("Digite o id do aluno a ser consultado: ");
+                Integer idConsulta = ler.nextInt();
 
-            if (opcao == 1) menu.consultarDados(); else menu.inicio();
+                Aluno aluno = alunos.get(idConsulta);
+                aluno.mostrarDados();
+
+                //navegar entre menus
+                System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+                opcao = ler.nextShort();
+
+            } while(opcao == 1);
 
         } else if (escolha == 2 && professores.size() != 0) {
-            System.out.println("Digite o id do professor a ser consultado: ");
-            Integer idConsulta = ler.nextInt();
 
-            Professor professor = professores.get(idConsulta);
-            System.out.println(professores);
+            short opcao = 0;
 
-            //navegar entre menus
-            System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
-            short opcao = ler.nextShort();
+            do{
+                System.out.println("Digite o id do professor a ser consultado: ");
+                Integer idConsulta = ler.nextInt();
 
-            if (opcao == 1) menu.consultarDados(); else menu.inicio();
+                Professor professor = professores.get(idConsulta);
+                System.out.println(professores);
+
+                //navegar entre menus
+                System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+                opcao = ler.nextShort();
+
+            } while(opcao == 1);
 
         } else {
             System.out.println("Não há dados cadastrados para a opção selecionada. Cadastre dados para realizar " +
@@ -161,19 +176,21 @@ public class Menu {
     //opcao7
 
     public void relatorioGeral() {
-        Menu menu = new Menu();
 
         if(alunos.size() != 0) {
-            for (Map.Entry<Integer, Aluno> aluno : alunos.entrySet()) {
-                aluno.getValue().mostrarDados();
-            }
 
-            //navegar entre menus
-            System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
-            short opcao = ler.nextShort();
+            short opcao = 0;
 
-            if (opcao == 1) menu.relatorioGeral(); else menu.inicio();
+            do {
+                for (Map.Entry<Integer, Aluno> aluno : alunos.entrySet()) {
+                    aluno.getValue().mostrarDados();
+                }
 
+                //navegar entre menus
+                System.out.println("Digite 1 para repetir a ação ou 2 para voltar ao inicio");
+                opcao = ler.nextShort();
+
+            } while(opcao == 1);
         } else {
             System.out.println("Não há dados cadastrados para a opção selecionada. Cadastre dados para realizar " +
                     "consultas!");
