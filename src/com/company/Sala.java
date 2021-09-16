@@ -1,11 +1,11 @@
 package com.company;
 
-public class Salas {
+public class Sala {
 
     private int id_salas;
     private String disponivel;
 
-    public Salas(int idSalas, String disponivel) {
+    public Sala(int idSalas, String disponivel) {
         this.id_salas = idSalas;
         this.disponivel = disponivel;
     }

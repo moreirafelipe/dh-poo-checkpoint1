@@ -1,31 +1,31 @@
 package com.company;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.ArrayList;
 
-public class Professores extends Pessoas {
+public class Professor extends Pessoa {
 
     private int id_professor;
-    private Disciplinas disciplina;
+    private Disciplina disciplina;
     private String email;
-    private ArrayList<Turmas> turmas;
+    private ArrayList<Turma> turmas = new ArrayList<>();
 
-    public Professores(String nome, int id_professor) {
+    public Professor(String nome, int id_professor) {
         super(nome);
         this.id_professor = id_professor;
+        this.turmas = turmas;
     }
 
-    public Professores(String nome, String telefone, LocalDate data_de_nascimento, int id_professor
-            , Disciplinas disciplina, String email) {
+    public Professor(String nome, String telefone, LocalDate data_de_nascimento, int id_professor
+            , Disciplina disciplina, String email) {
         super(nome, telefone, data_de_nascimento);
         this.id_professor = id_professor;
         this.disciplina = disciplina;
         this.email = email;
-        this.turmas = new ArrayList<>();
+        this.turmas = turmas;
     }
 
-    public void adicionarTurmas(Turmas turma){
+    public void adicionarTurmas(Turma turma){
         this.turmas.add(turma);
     }
 
@@ -39,7 +39,7 @@ public class Professores extends Pessoas {
                 "\nDisciplina: " + this.getDisciplina());
 
         if(turmas.size() != 0) {
-            for(Turmas turma: turmas){
+            for(Turma turma: turmas){
                 turma.dadosTurma();
             }
         } else {
@@ -66,11 +66,11 @@ public class Professores extends Pessoas {
         this.id_professor = id_professor;
     }
 
-    public Disciplinas getDisciplina() {
+    public Disciplina getDisciplina() {
         return disciplina;
     }
 
-    public void setDisciplina(Disciplinas disciplina) {
+    public void setDisciplina(Disciplina disciplina) {
         this.disciplina = disciplina;
     }
 
@@ -82,11 +82,11 @@ public class Professores extends Pessoas {
         this.email = email;
     }
 
-    public ArrayList<Turmas> getTurmas() {
+    public ArrayList<Turma> getTurmas() {
         return turmas;
     }
 
-    public void setTurmas(ArrayList<Turmas> turmas) {
+    public void setTurmas(ArrayList<Turma> turmas) {
         this.turmas = turmas;
     }
 }

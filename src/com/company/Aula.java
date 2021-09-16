@@ -2,15 +2,15 @@ package com.company;
 
 import java.time.LocalTime;
 
-public class Aulas {
+public class Aula {
 
     private int id_aulas;
-    private Turmas turma;
-    private Professores professor;
+    private Turma turma;
+    private Professor professor;
     private LocalTime inicio;
     private LocalTime fim;
 
-    public Aulas(int id_aulas, Turmas turma, Professores professor, LocalTime inicio, LocalTime fim) {
+    public Aula(int id_aulas, Turma turma, Professor professor, LocalTime inicio, LocalTime fim) {
         this.id_aulas = id_aulas;
         this.turma = turma;
         this.professor = professor;
@@ -26,19 +26,19 @@ public class Aulas {
         this.id_aulas = id_aulas;
     }
 
-    public Turmas getTurma() {
+    public Turma getTurma() {
         return turma;
     }
 
-    public void setTurma(Turmas turma) {
+    public void setTurma(Turma turma) {
         this.turma = turma;
     }
 
-    public Professores getProfessor() {
+    public Professor getProfessor() {
         return professor;
     }
 
-    public void setProfessor(Professores professor) {
+    public void setProfessor(Professor professor) {
         this.professor = professor;
     }
 

@@ -1,12 +1,12 @@
 package com.company;
 
-public class Turmas {
+public class Turma {
 
     private int id_turmas;
-    private Salas sala;
+    private Sala sala;
     private int totalAlunos;
 
-    public Turmas(int id_turmas, Salas sala, int totalAlunos) {
+    public Turma(int id_turmas, Sala sala, int totalAlunos) {
         this.id_turmas = id_turmas;
         this.sala = sala;
         this.totalAlunos = totalAlunos;
@@ -27,11 +27,11 @@ public class Turmas {
         this.id_turmas = id_turmas;
     }
 
-    public Salas getSala() {
+    public Sala getSala() {
         return sala;
     }
 
-    public void setSala(Salas sala) {
+    public void setSala(Sala sala) {
         this.sala = sala;
     }
 

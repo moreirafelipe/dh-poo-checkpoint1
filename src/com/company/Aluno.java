@@ -3,22 +3,22 @@ package com.company;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class Alunos extends Pessoas {
+public class Aluno extends Pessoa {
 
     private int id_alunos;
     private String endereco;
-    private Turmas turma;
-    private Boletins boletim;
+    private Turma turma;
+    private Boletim boletim;
 
     // quando gera um construtor, ele surge com os atributos gerais da superclasse(pai); os atributos da subclasse(filho) devem ser adicionados após;
-    public Alunos(String nome, int id_alunos, Boletins boletim) {
+    public Aluno(String nome, int id_alunos, Boletim boletim) {
         super(nome);
         this.id_alunos = id_alunos;
         this.boletim = boletim; //boletim não pode ser em arrays
     }
 
-    public Alunos(String nome, String telefone, LocalDate data_de_nascimento, String endereco, Turmas turma,
-                  Boletins boletim) {
+    public Aluno(String nome, String telefone, LocalDate data_de_nascimento, String endereco, Turma turma,
+                  Boletim boletim) {
         //Turmas serão em arrays
         super(nome, telefone, data_de_nascimento);
         this.endereco = endereco;
@@ -32,6 +32,8 @@ public class Alunos extends Pessoas {
         System.out.println("Nome: " + this.getNome());
         System.out.println("Endereço: " + this.getEndereco());
         System.out.println("Turma: " + this.getTurma());
+
+        this.boletim.mostrarDados();
     }
 
     public void imprimirHistorico() {
@@ -86,19 +88,19 @@ public class Alunos extends Pessoas {
         this.endereco = endereco;
     }
 
-    public Turmas getTurma() {
+    public Turma getTurma() {
         return turma;
     }
 
-    public void setTurma(Turmas turma) {
+    public void setTurma(Turma turma) {
         this.turma = turma;
     }
 
-    public Boletins getBoletim() {
+    public Boletim getBoletim() {
         return boletim;
     }
 
-    public void setBoletim(Boletins boletim) {
+    public void setBoletim(Boletim boletim) {
         this.boletim = boletim;
     }
 
@@ -110,7 +112,7 @@ public class Alunos extends Pessoas {
                 "\nBoletim: " + boletim;
     }
 
-    //    public ArrayList<Boletins> getBoletins() {
+    //    public ArrayList<Boletim> getBoletins() {
 //        return boletins;
 //    }
 //

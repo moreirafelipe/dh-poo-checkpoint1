@@ -1,16 +1,16 @@
 package com.company;
 
-public class Disciplinas {
+public class Disciplina {
 
     private String nome;
     private Double nota;
     private int falta;
 
-    public Disciplinas(String nome) {
+    public Disciplina(String nome) {
         this.nome = nome;
     }
 
-    public Disciplinas(String nome, Double nota, int falta) {
+    public Disciplina(String nome, Double nota, int falta) {
         this.nome = nome;
         this.nota = nota;
         this.falta = falta;

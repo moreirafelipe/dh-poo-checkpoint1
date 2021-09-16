@@ -2,17 +2,17 @@ package com.company;
 
 import java.time.LocalDate;
 
-public abstract class Pessoas {
+public abstract class Pessoa {
 
     private String nome;
     private String telefone;
     private LocalDate data_de_nascimento;
 
-    public Pessoas(String nome) {
+    public Pessoa(String nome) {
         this.nome = nome;
     }
 
-    public Pessoas(String nome, String telefone, LocalDate data_de_nascimento) {
+    public Pessoa(String nome, String telefone, LocalDate data_de_nascimento) {
         this.nome = nome;
         this.telefone = telefone;
         this.data_de_nascimento = data_de_nascimento;
