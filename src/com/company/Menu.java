@@ -34,9 +34,6 @@ public class Menu {
         System.out.println("Digite o nome do aluno a ser cadastrado: ");
         String nomeAluno = ler.next();
 
-//        System.out.println("Digite o id do aluno: ");
-//        Integer idAluno = ler.nextInt();
-
         alunos.put(idAluno, new Aluno( nomeAluno, idAluno, new Boletim("1Bim")));
 
         System.out.println("Aluno(a) cadastrado(a) com sucesso!");
@@ -49,32 +46,37 @@ public class Menu {
         System.out.println("Digite o nome do professor a ser cadastrado: ");
         String nomeProfessor = ler.next();
 
-//        System.out.println("Digite o id do professor: ");
-//        Integer idProfessor = ler.nextInt();
-
         professores.put(idProfessor, new Professor(nomeProfessor, idProfessor));
         System.out.println("Professor cadastrado com sucesso!");
     }
 
     //opcao3
     public void cadastrarMedias(){
-        System.out.println("Digite o ID do(a) aluno(a): ");
-        Integer opcao = ler.nextInt();
+        if(alunos.size() != 0) {
+            System.out.println("Digite o ID do(a) aluno(a): ");
+            Integer opcao = ler.nextInt();
 
-        Aluno resultado = alunos.get(opcao);
+            Aluno resultado = alunos.get(opcao);
 
-        resultado.cadastrarMedias();
-
+            resultado.cadastrarMedias();
+        } else {
+            System.out.println("Há " + alunos.size() + " alunos cadastrados. Cadastre alunos para incluir dados!");
+        }
     }
 
     //opcao4
     public void cadastrarFaltas(){
-        System.out.println("Digite o ID do(a) aluno(a):");
-        Integer opcao = ler.nextInt();
+        if(alunos.size() != 0) {
 
-        Aluno resultado = alunos.get(opcao);
+            System.out.println("Digite o ID do(a) aluno(a):");
+            Integer opcao = ler.nextInt();
 
-        resultado.cadastrarFaltas();
+            Aluno resultado = alunos.get(opcao);
+
+            resultado.cadastrarFaltas();
+        } else {
+            System.out.println("Há " + alunos.size() + " alunos cadastrados. Cadastre alunos para incluir dados!");
+        }
     }
 
     //opcao5
@@ -87,18 +89,22 @@ public class Menu {
         System.out.println("Digite 1 para consultar dados de alunos ou 2 para dados de professores?");
         short escolha = ler.nextShort();
 
-        if(escolha == 1) {
+        if(escolha == 1 && alunos.size() != 0) {
+
             System.out.println("Digite o id do aluno a ser consultado: ");
             Integer idConsulta = ler.nextInt();
 
             Aluno aluno = alunos.get(idConsulta);
             aluno.mostrarDados();
-        } else {
+        } else if (escolha == 2 && professores.size() != 0) {
             System.out.println("Digite o id do professor a ser consultado: ");
             Integer idConsulta = ler.nextInt();
 
             Professor professor = professores.get(idConsulta);
             System.out.println(professores);
+        } else {
+            System.out.println("Não há dados cadastrados para a opção selecionada. Cadastre dados para realizar " +
+                    "consultas!");
         }
     }
 
@@ -110,7 +116,8 @@ public class Menu {
                 aluno.getValue().mostrarDados();
             }
         } else {
-            System.out.println("Não há alunos(as) cadastrados(as)!");
+            System.out.println("Não há dados cadastrados para a opção selecionada. Cadastre dados para realizar " +
+                    "consultas!");
         }
     }
 

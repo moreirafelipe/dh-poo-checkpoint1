@@ -4,7 +4,7 @@ public class Disciplina {
 
     private String nome;
     private Double nota;
-    private int falta;
+    private int falta = 0;
 
     public Disciplina(String nome) {
         this.nome = nome;
@@ -18,14 +18,14 @@ public class Disciplina {
 
     public void mostrarDados(){
 
-        if(this.getNota() != null) {
+        if(this.getNota() != null && this.getFalta() != 0) {
             System.out.println("\n--------- Disciplina " + getNome() +  "--------\n");
             System.out.println("Nome da disciplina: " + getNome());
             System.out.println("Média: " + this.getNota());
             System.out.println("Faltas: " + this.getFalta());
         } else {
 
-            System.out.println("Não há notas cadastradas para a disciplina de " + getNome());
+            System.out.println("Não há dados cadastrados para a disciplina de " + getNome());
         }
     }
 
