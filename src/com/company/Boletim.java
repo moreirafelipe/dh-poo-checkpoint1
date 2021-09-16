@@ -36,12 +36,6 @@ public class Boletim {
         }
     }
 
-//    public void adicionarDisciplina(Integer idDisciplina, Disciplina nomeDisciplina) {
-//        disciplinas.put(04, nomeDisciplina);
-//        System.out.println("Disciplina adicionada com sucesso!");
-//        System.out.println(disciplinas);
-//    }
-
     public void consultarDisciplina(String nomeDisciplina) {
         Disciplina resultado = this.disciplinas.get(nomeDisciplina);
         resultado.mostrarDados();

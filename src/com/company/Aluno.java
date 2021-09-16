@@ -20,7 +20,7 @@ public class Aluno extends Pessoa {
         System.out.println("\n---------Dados do(a) aluno(a)--------\n");
         System.out.println("ID: " + this.getId_alunos());
         System.out.println("Nome: " + this.getNome());
-        System.out.println("Turma: " + this.getTurma());
+        System.out.println("Turma: " + this.getTurma().getId_turmas());
 
         this.boletim.mostrarDados();
     }
@@ -55,11 +55,10 @@ public class Aluno extends Pessoa {
         System.out.println("Faltas cadastradas com sucesso!");
     }
 
-//
-//    public void consultarNota() {
-//
-//        System.out.println(get.Boletim());
-//    }
+    @Override
+    public void setNome(String nome) {
+        super.setNome(nome);
+    }
 
     public int getId_alunos() {
         return id_alunos;
@@ -71,7 +70,10 @@ public class Aluno extends Pessoa {
     }
 
     public void setTurma(Turma turma) {
+
         this.turma = turma;
+
+        System.out.println("Turma atribuida com sucesso!");
     }
 
     public Boletim getBoletim() {
@@ -81,20 +83,4 @@ public class Aluno extends Pessoa {
     public void setBoletim(Boletim boletim) {
         this.boletim = boletim;
     }
-
-    @Override
-    public String toString() {
-        return "\nDados do aluno: " +
-                "\nID do aluno(a): " + id_alunos +
-                "\nNome: " + super.getNome() +
-                "\nBoletim: " + boletim;
-    }
-
-    //    public ArrayList<Boletim> getBoletins() {
-//        return boletins;
-//    }
-//
-//    public void setBoletins(ArrayList<Boletins> boletins) {
-//        this.boletins = boletins;
-//    }
 }

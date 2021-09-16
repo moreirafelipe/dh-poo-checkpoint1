@@ -23,16 +23,13 @@ public class Professor extends Pessoa {
         this.turmas = turmas;
     }
 
-    public void adicionarTurmas(Turma turma){
-        this.turmas.add(turma);
-    }
 
     public void mostrarDados(){
+
         System.out.println("\n---------Dados do(a) Professor(a)--------\n");
         System.out.println("\nDados do professor: " +
                 "\nID do(a) professor(a): " + id_professor +
                 "\nNome: " + this.getNome() +
-                "\nTurma: " + this.getTurmas() +
                 "\nDisciplina: " + this.getDisciplina());
 
         if(turmas.size() != 0) {
@@ -45,13 +42,16 @@ public class Professor extends Pessoa {
         }
     }
 
+    public void atribuirTurmas(Turma turma) {
+
+        this.turmas.add(turma);
+
+        System.out.println("Turma adicionada com sucesso!");
+    }
+
     @Override
-    public String toString() {
-        return "\nDados do professor: " +
-                "\nID do(a) professor(a): " + id_professor +
-                "\nNome: " + this.getNome() +
-                "\nTurma: " + this.getTurmas() +
-                "\nDisciplina: " + this.getDisciplina();
+    public void setNome(String nome) {
+        super.setNome(nome);
     }
 
     public int getId_professor() {

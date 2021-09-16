@@ -15,9 +15,11 @@ public class Menu {
         System.out.println("|| 3 - Cadastrar médias                                                                ||");
         System.out.println("|| 4 - Cadastrar faltas                                                                ||");
         System.out.println("|| 5 - Cadastrar turmas                                                                ||");
-        System.out.println("|| 6 - Consultar dados                                                                 ||");
-        System.out.println("|| 7 - Relatório de alunos                                                             ||");
-        System.out.println("|| 8 - Sair                                                                            ||");
+        System.out.println("|| 6 - Atribuir turmas                                                                 ||");
+        System.out.println("|| 7 - Consultar dados                                                                 ||");
+        System.out.println("|| 8 - Atualizar dados                                                                 ||");
+        System.out.println("|| 9 - Relatório de alunos                                                             ||");
+        System.out.println("|| 10 - Sair                                                                           ||");
         System.out.println("||-------------------------------------------------------------------------------------||");
     }
 
@@ -46,15 +48,19 @@ public class Menu {
                     break;
                 case 5: colegio.cadastrarTurmas();
                     break;
-                case 6: colegio.consultarDados();
+                case 6: colegio.atribuirTurmas();
                     break;
-                case 7: colegio.relatorioGeral();
+                case 7: colegio.consultarDados();
+                    break;
+                case 8: colegio.atualizarDados();
+                    break;
+                case 9: colegio.relatorioGeral();
                     break;
                 default:
                     System.out.println("Por favor, escolha uma opção do menu!");
                     break;
             }
-        }while(opcaoMenu != 8);
+        }while(opcaoMenu != 10);
         System.out.println("\nAté breve!");
     }
 }

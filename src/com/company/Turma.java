@@ -9,7 +9,7 @@ public class Turma {
     }
 
     public void dadosTurma(){
-        System.out.println("\n--------- Dados da turma" + id_turmas + "--------\n");
+        System.out.println("\n--------- Dados da turma " + id_turmas + "--------\n");
         System.out.println("ID turma: " + this.getId_turmas());
     }
 
