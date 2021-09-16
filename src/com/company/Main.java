@@ -17,48 +17,102 @@ public class Main {
 //        Disciplinas disciplina3 = new Disciplinas("Ciências");
 //        Disciplinas disciplina4 = new Disciplinas("História");
 
-        Boletins boletim = new Boletins("1Bim");
 
-        int opcao;
-
-        Scanner ler = new Scanner(System.in); //gerando leitor de entrada de input
-
-        System.out.println("--------------------------------------------------------------------------------------");
-        System.out.println("--------------------------------------------------------------------------------------");
-
-        System.out.println("\nSeja bem-vindo ao sistema de gestão escolar - SIGESC\n");
-
-        System.out.println("--------------------------------------------------------------------------------------");
-        System.out.println("--------------------------------------------------------------------------------------");
-        System.out.println("1 - Cadastrar disciplinas");
-        System.out.println("2 - Consultar disciplinas");
-        System.out.println("3 - Sair");
-        System.out.println("Digite a sua escolha:");
-        opcao = ler.nextInt();
-
-        while(opcao != 3) {
-
-            switch (opcao) {
-                case 1: boletim.adicionarDisciplinas("Portugues");
-                    break;
-                case 2: boletim.consultarDisciplinas("Portugues");
-                    break;
-            }
-
-            System.out.println("--------------------------------------------------------------------------------------");
-            System.out.println("--------------------------------------------------------------------------------------");
-
-            System.out.println("\nSeja bem-vindo ao sistema de gestão escolar - SIGESC\n");
-
-            System.out.println("--------------------------------------------------------------------------------------");
-            System.out.println("--------------------------------------------------------------------------------------");
-            System.out.println("1 - Cadastrar disciplinas");
-            System.out.println("2 - Consultar disciplinas");
-            System.out.println("3 - Sair");
-            System.out.println("Digite a sua escolha:");
-            opcao = ler.nextInt();
-
-        }
+//        HashMap<Integer, Alunos> alunos = new HashMap<Integer, Alunos>();
+//        HashMap<Integer, Professores> professores = new HashMap<Integer, Professores>();
+//        Boletins boletim = new Boletins("1Bim");
+//
+//        int opcao;
+//
+//        Scanner ler = new Scanner(System.in); //gerando leitor de entrada de input
+//
+//        System.out.println("--------------------------------------------------------------------------------------");
+//        System.out.println("--------------------------------------------------------------------------------------");
+//
+//        System.out.println("\nSeja bem-vindo ao sistema de gestão escolar - SIGESC\n");
+//
+//        System.out.println("--------------------------------------------------------------------------------------");
+//        System.out.println("--------------------------------------------------------------------------------------");
+//        System.out.println("1 - Cadastrar disciplinas");
+//        System.out.println("2 - Consultar disciplinas");
+//        System.out.println("3 - Adicionar aluno");
+//        System.out.println("4 - Adicionar professor");
+//        System.out.println("5 - Consultar pessoa");
+//        System.out.println("6 - Sair");
+//        System.out.println("Digite a sua escolha:");
+//        opcao = ler.nextInt();
+//
+//        while(opcao != 6) {
+//
+//            Scanner scan = new Scanner(System.in);
+//            String entrada;
+//
+//            switch (opcao) {
+//                case 1:
+//                    System.out.println("Digite o nome da disciplina a ser cadastrada: ");
+//                    entrada = scan.next();
+//                    boletim.adicionarDisciplinas(entrada);
+//                    break;
+//                case 2:
+//                    System.out.println("Digite o nome da disciplina a ser consultada: ");
+//                    entrada = scan.next();
+//                    boletim.consultarDisciplinas(entrada);
+//                    break;
+//                case 3:
+//                    System.out.println("Digite o nome do aluno a ser cadastrado: ");
+//                    String nomeAluno = scan.next();
+//                    System.out.println("Digite o id do aluno: ");
+//                    Integer idAluno = scan.nextInt();
+//                    alunos.put(idAluno, new Alunos(nomeAluno, "aluno", idAluno, boletim));
+//                    System.out.println("Aluno cadastrada com sucesso!");
+//                    break;
+//                case 4:
+//                    System.out.println("Digite o nome do professor a ser cadastrado: ");
+//                    String nomeProfessor = scan.next();
+//                    System.out.println("Digite o id do professor: ");
+//                    Integer idProfessor = scan.nextInt();
+//                    professores.put(idProfessor, new Professores(nomeProfessor, idProfessor));
+//                    System.out.println("Professor cadastrado com sucesso!");
+//                    break;
+//                case 5:
+//
+//                    System.out.println("Digite 1 para consultar alunos ou 2 para professores?");
+//                    int escolha = scan.nextInt();
+//
+//                    if(escolha == 1) {
+//                        System.out.println("Digite o id do aluno a ser consultado: ");
+//                        Integer idConsulta = scan.nextInt();
+//
+//                        Alunos aluno = alunos.get(idConsulta);
+//                        System.out.println(aluno);
+//                        break;
+//                    }
+//
+//                    System.out.println("Digite o id do professor a ser consultado: ");
+//                    Integer idConsulta = scan.nextInt();
+//
+//                    Professores professor = professores.get(idConsulta);
+//                    System.out.println(professores);
+//                    break;
+//            }
+//
+//            System.out.println("--------------------------------------------------------------------------------------");
+//            System.out.println("--------------------------------------------------------------------------------------");
+//
+//            System.out.println("\nSeja bem-vindo ao sistema de gestão escolar - SIGESC\n");
+//
+//            System.out.println("--------------------------------------------------------------------------------------");
+//            System.out.println("--------------------------------------------------------------------------------------");
+//            System.out.println("1 - Cadastrar disciplinas");
+//            System.out.println("2 - Consultar disciplinas");
+//            System.out.println("3 - Adicionar aluno");
+//            System.out.println("4 - Adicionar professor");
+//            System.out.println("5 - Consultar pessoa");
+//            System.out.println("6 - Sair");
+//            System.out.println("Digite a sua escolha:");
+//            opcao = ler.nextInt();
+//
+//        }
 
 
 

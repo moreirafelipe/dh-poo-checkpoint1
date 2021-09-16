@@ -12,6 +12,13 @@ public class Turmas {
         this.totalAlunos = totalAlunos;
     }
 
+    public void dadosTurma(){
+        System.out.println("\n--------- Dados da turma" + id_turmas + "--------\n");
+        System.out.println("ID turma: " + this.getId_turmas());
+        System.out.println("Sala: " + this.getSala());
+        System.out.println("Total de alunos: " + this.getTotalAlunos());
+    }
+
     public int getId_turmas() {
         return id_turmas;
     }

@@ -2,27 +2,28 @@ package com.company;
 
 import java.time.LocalDate;
 
-public class Pessoas {
+public abstract class Pessoas {
 
     private String nome;
     private String telefone;
     private LocalDate data_de_nascimento;
-    private String categoria;
 
-    public Pessoas(String nome, String telefone, LocalDate data_de_nascimento, String categoria) {
+    public Pessoas(String nome) {
+        this.nome = nome;
+    }
+
+    public Pessoas(String nome, String telefone, LocalDate data_de_nascimento) {
         this.nome = nome;
         this.telefone = telefone;
         this.data_de_nascimento = data_de_nascimento;
-        this.categoria = categoria;
     }
 
     @Override
     public String toString() {
-        return "Dados do(a)" + this.categoria +
+        return
                 "Nome: '" + nome + '\'' +
                 ", Telefone='" + telefone + '\'' +
                 ", Data_de_nascimento=" + data_de_nascimento +
-                ", Categoria='" + categoria + '\'' +
                 '}';
     }
 
@@ -50,11 +51,4 @@ public class Pessoas {
         this.data_de_nascimento = data_de_nascimento;
     }
 
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
 }

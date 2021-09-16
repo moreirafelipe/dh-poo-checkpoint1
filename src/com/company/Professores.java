@@ -7,57 +7,55 @@ import java.util.ArrayList;
 public class Professores extends Pessoas {
 
     private int id_professor;
-    private Disciplinas materia;
+    private Disciplinas disciplina;
     private String email;
-    private LocalTime entrada;
-    private LocalTime saida;
-    private Double valorHora;
     private ArrayList<Turmas> turmas;
-    private ArrayList<Aulas> aulas;
 
-    public Professores(String nome, String telefone, LocalDate data_de_nascimento, String categoria, int id_professor
-            , Disciplinas materia, String email, LocalTime entrada, LocalTime saida, Double valorHora) {
-        super(nome, telefone, data_de_nascimento, categoria);
+    public Professores(String nome, int id_professor) {
+        super(nome);
         this.id_professor = id_professor;
-        this.materia = materia;
+    }
+
+    public Professores(String nome, String telefone, LocalDate data_de_nascimento, int id_professor
+            , Disciplinas disciplina, String email) {
+        super(nome, telefone, data_de_nascimento);
+        this.id_professor = id_professor;
+        this.disciplina = disciplina;
         this.email = email;
-        this.entrada = entrada;
-        this.saida = saida;
-        this.valorHora = valorHora;
         this.turmas = new ArrayList<>();
-        this.aulas = new ArrayList<>();
     }
 
     public void adicionarTurmas(Turmas turma){
-
         this.turmas.add(turma);
-
     }
 
-    public void adicionarAulas(Aulas aula){
+    public void mostrarDados(){
+        System.out.println("\n---------Dados do(a) Professor(a)--------\n");
+        System.out.println("\nDados do professor: " +
+                "\nID do(a) professor(a): " + id_professor +
+                "\nNome: " + this.getNome() +
+                "\nEmail: " + this.getEmail() +
+                "\nTurma: " + this.getTurmas() +
+                "\nDisciplina: " + this.getDisciplina());
 
-        this.aulas.add(aula);
+        if(turmas.size() != 0) {
+            for(Turmas turma: turmas){
+                turma.dadosTurma();
+            }
+        } else {
 
-    }
-
-    public double calcularSalario(){
-        double salario = this.valorHora * (this.saida.getHour() - this.entrada.getHour()); //Calculando horas cheias por enquanto
-        System.out.println("Seu salário é de " + salario);
-        return salario;
+            System.out.println("Não há turmas cadastradas!");
+        }
     }
 
     @Override
     public String toString() {
-        return "Dados do professor:" +
-                "id_professor=" + id_professor +
-                ", materia=" + materia +
-                ", email='" + email + '\'' +
-                ", entrada=" + entrada +
-                ", saida=" + saida +
-                ", valorHora=" + valorHora +
-                ", turmas=" + turmas +
-                ", aulas=" + aulas +
-                '}';
+        return "\nDados do professor: " +
+                "\nID do(a) professor(a): " + id_professor +
+                "\nNome: " + this.getNome() +
+                "\nEmail: " + this.getEmail() +
+                "\nTurma: " + this.getTurmas() +
+                "\nDisciplina: " + this.getDisciplina();
     }
 
     public int getId_professor() {
@@ -68,12 +66,12 @@ public class Professores extends Pessoas {
         this.id_professor = id_professor;
     }
 
-    public Disciplinas getMateria() {
-        return materia;
+    public Disciplinas getDisciplina() {
+        return disciplina;
     }
 
-    public void setMateria(Disciplinas materia) {
-        this.materia = materia;
+    public void setDisciplina(Disciplinas disciplina) {
+        this.disciplina = disciplina;
     }
 
     public String getEmail() {
@@ -84,43 +82,11 @@ public class Professores extends Pessoas {
         this.email = email;
     }
 
-    public LocalTime getEntrada() {
-        return entrada;
-    }
-
-    public void setEntrada(LocalTime entrada) {
-        this.entrada = entrada;
-    }
-
-    public LocalTime getSaida() {
-        return saida;
-    }
-
-    public void setSaida(LocalTime saida) {
-        this.saida = saida;
-    }
-
-    public Double getValorHora() {
-        return valorHora;
-    }
-
-    public void setValorHora(Double valorHora) {
-        this.valorHora = valorHora;
-    }
-
     public ArrayList<Turmas> getTurmas() {
         return turmas;
     }
 
     public void setTurmas(ArrayList<Turmas> turmas) {
         this.turmas = turmas;
-    }
-
-    public ArrayList<Aulas> getAulas() {
-        return aulas;
-    }
-
-    public void setAulas(ArrayList<Aulas> aulas) {
-        this.aulas = aulas;
     }
 }

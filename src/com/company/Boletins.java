@@ -2,33 +2,67 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 public class Boletins {
 
     private String periodo;
 //    private ArrayList <Disciplinas> disciplinas =  new ArrayList<>();
-    private HashMap<String, Disciplinas> disciplinas = new HashMap<String, Disciplinas>();
+    private HashMap<Integer, Disciplinas> disciplinas = new HashMap<Integer, Disciplinas>();
 
     public Boletins(String periodo) {
-
         this.periodo = periodo;
         this.disciplinas = disciplinas;
     }
 
-    public void apresentarDados() {
+    public Boletins(String periodo, Disciplinas disciplina1, Disciplinas disciplina2, Disciplinas disciplina3,
+                    Disciplinas disciplina4) {
 
-        System.out.println(disciplinas);
+        this.periodo = periodo;
+        this.disciplinas.put(01, disciplina1);
+        this.disciplinas.put(02, disciplina2);
+        this.disciplinas.put(03, disciplina3);
+        this.disciplinas.put(04, disciplina4);
+
     }
 
-    public void adicionarDisciplinas(String nomeDisciplina) {
+    //Mostrar relatorio de notas
+    public void mostrarDados(){
+        System.out.println("\n--------- Histórico escolar --------\n");
+        System.out.println("Período: " + getPeriodo());
 
-        this.disciplinas.put(nomeDisciplina, new Disciplinas(nomeDisciplina));
-        System.out.println("Disciplina adicionada!");
-        System.out.println(disciplinas);
+        if(disciplinas.size() != 0) {
+
+            for (Map.Entry<Integer, Disciplinas> disciplina : disciplinas.entrySet()) {
+                System.out.println(disciplina);
+            }
+
+        } else {
+
+            System.out.println("Não há disciplinas cadastradas!");
+        }
     }
+
+//    public void adicionarDisciplinas(Integer idDisciplina, Disciplinas nomeDisciplina) {
+//        disciplinas.put(04, nomeDisciplina);
+//        System.out.println("Disciplina adicionada com sucesso!");
+//        System.out.println(disciplinas);
+//    }
 
     public void consultarDisciplinas(String nomeDisciplina) {
-        System.out.println("Consulta: " + this.disciplinas.get(nomeDisciplina));
+        Disciplinas resultado = this.disciplinas.get(nomeDisciplina);
+        resultado.mostrarDados();
+    }
+
+    public void definirMedias(Integer id, Double nota) {
+        Disciplinas resultado = this.disciplinas.get(id);
+        resultado.setNota(nota);
+    }
+
+    public void definirFaltas(Integer id, int faltas) {
+        Disciplinas resultado = this.disciplinas.get(id);
+        resultado.setFalta(faltas);
     }
 
     public String getPeriodo() {
@@ -41,10 +75,7 @@ public class Boletins {
 
     @Override
     public String toString() {
-        return "Boletins{" +
-                "periodo='" + periodo + '\'' +
-                ", disciplinas=" + disciplinas +
-                '}';
+        return  "\nPeriodo: " + periodo +
+                "\nDisciplinas: \n" + disciplinas;
     }
-
 }
