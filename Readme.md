@@ -18,13 +18,21 @@ O objetivo deste checkpoint é utilizar conceitos de orientação a objetos apre
 
 1. Características básicas:
 
-   ​	a. Criar uma nova proposta para um problema a ser solucionado. O texto com a definição da proposta deverá conter no 		mínimo 3 (três) parágrafos: Uma introdução explicando o problema de forma geral; **(FAZER)**
+   ​	a. Criar uma nova proposta para um problema a ser solucionado. O texto com a definição da proposta deverá conter no 		mínimo 3 (três) parágrafos: Uma introdução explicando o problema de forma geral; 
 
-   ​	a. Um parágrafo descrevendo o cenário da aplicação; **(FAZER)**
+   ​	a. Um parágrafo descrevendo o cenário da aplicação;
 
-   ​	b. Um ou mais parágrafos com os dados para solucionar o problema; **(FAZER)**
+   ​	b. Um ou mais parágrafos com os dados para solucionar o problema;
 
-   ​	c. Criação e apresentação do diagrama de classes com a descrição dos atributos e métodos do sistema. **(FEITO)**
+   ​	c. Criação e apresentação do diagrama de classes com a descrição dos atributos e métodos do sistema.
+
+
+
+**Diagrama de classes:**
+
+
+
+<img src="https://i.imgur.com/Q02zzMy.png" alt="img" style="zoom:80%;" />
 
 
 
@@ -40,13 +48,13 @@ O objetivo deste checkpoint é utilizar conceitos de orientação a objetos apre
 
 2. Tópicos da disciplina que deverão ser contemplados e que serão avaliados no projeto:
 
-   a. Classes (atributos e métodos), Construtores, Encapsulamento; **(FEITO)**
+   a. Classes (atributos e métodos), Construtores, Encapsulamento;
 
    ​	i: No mínimo 4 classes (Não considerando a classe principal com método main);
 
-   b. Implementar os conceitos de sobrecarga/sobreescrita (de métodos e construtores); **(FEITO)**
+   b. Implementar os conceitos de sobrecarga/sobreescrita (de métodos e construtores);
 
-   c. Implementar o conceito de herança, classe abstrata e/ou interface. **(FAZER)**
+   c. Implementar o conceito de herança, classe abstrata e/ou interface.
 
 
 

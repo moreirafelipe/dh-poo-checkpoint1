@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Main {
 
     public void inicio() {
-
         System.out.println("||-------------------------------------------------------------------------------------||");
         System.out.println("||                Seja bem-vindo ao sistema de gestão escolar - SIGESC                 ||");
         System.out.println("||-------------------------------------------------------------------------------------||");
@@ -23,7 +22,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Menu menu = new Menu();
+        Main menu = new Main();
         Colegio colegio = new Colegio();
         Scanner lerMenu = new Scanner(System.in);
 

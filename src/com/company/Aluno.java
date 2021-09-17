@@ -1,11 +1,8 @@
 package com.company;
 
-import java.time.LocalDate;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Aluno extends Pessoa {
-
     private int id_alunos;
     private Turma turma;
     private Boletim boletim;
@@ -28,10 +25,6 @@ public class Aluno extends Pessoa {
             System.out.println("Turma: " + this.turma.getId_turmas());
         }
 
-        this.boletim.mostrarDados();
-    }
-
-    public void imprimirHistorico() {
         this.boletim.mostrarDados();
     }
 
@@ -64,7 +57,6 @@ public class Aluno extends Pessoa {
 
     @Override
     public void atribuirTurmas(Turma turma) {
-
         this.turma = turma;
         System.out.println("\nTurma atribuida com sucesso!");
     }
@@ -73,13 +65,10 @@ public class Aluno extends Pessoa {
     public void setNome(String nome) {
         super.setNome(nome);
     }
-
     public int getId_alunos() {
         return id_alunos;
     }
-
     public Turma getTurma() {
         return turma;
     }
-
 }

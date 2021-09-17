@@ -1,9 +1,7 @@
 package com.company;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public class Boletim {
 
@@ -19,7 +17,7 @@ public class Boletim {
         this.disciplinas.put(04, new Disciplina("Historia"));
     }
 
-    //Mostrar relatorio de notas
+    //Mostrar relatorio de dados da classe
     public void mostrarDados(){
         System.out.println("\n--------- Histórico escolar --------\n");
         System.out.println("Período: " + getPeriodo());
@@ -48,9 +46,5 @@ public class Boletim {
 
     public String getPeriodo() {
         return periodo;
-    }
-
-    public HashMap<Integer, Disciplina> getDisciplinas() {
-        return disciplinas;
     }
 }
