@@ -10,6 +10,7 @@ public class Disciplina {
         this.nome = nome;
     }
 
+    //Método para exibição de dados da classe
     public void mostrarDados(){
 
         if(this.getNota() != null || this.getFalta() != 0) {
@@ -23,6 +24,7 @@ public class Disciplina {
         }
     }
 
+    //Modificadores de acesso
     public String getNome() {
         return nome;
     }

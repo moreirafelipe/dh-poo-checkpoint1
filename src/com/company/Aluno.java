@@ -14,6 +14,7 @@ public class Aluno extends Pessoa {
         this.boletim = boletim; //boletim não pode ser em arrays
     }
 
+    //Método para exibição de dados da classe
     public void mostrarDados(){
         System.out.println("\n---------Dados do(a) aluno(a)--------\n");
         System.out.println("ID: " + this.getId_alunos());
@@ -61,6 +62,7 @@ public class Aluno extends Pessoa {
         System.out.println("\nTurma atribuida com sucesso!");
     }
 
+    //Sobreescrevendo modificadores de acesso
     @Override
     public void setNome(String nome) {
         super.setNome(nome);

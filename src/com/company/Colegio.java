@@ -6,14 +6,18 @@ import java.util.Scanner;
 
 public class Colegio {
 
+    //Hashmap para armazenamento e organização de disciplinas por chave e valor com auto-incremento de id
     HashMap<Integer, Aluno> alunos = new HashMap<Integer, Aluno>();
     HashMap<Integer, Professor> professores = new HashMap<Integer, Professor>();
     HashMap<Integer, Turma> turmas = new HashMap<Integer, Turma>();
     HashMap<Integer, String> disciplinas = new HashMap<Integer,String>();
 
+    //Instancia leitor de input em escopo global para uso nos métodos
     Scanner ler = new Scanner(System.in);
 
-    //opcao1
+
+    //Métodos acionados pelo menu na Main
+    //Metodo de cadastro de objetos Aluno
     public void cadastrarAlunos(){
         short opcao = 0;
 
@@ -33,6 +37,7 @@ public class Colegio {
         } while(opcao == 1);
     }
 
+    //Metodo de cadastro de objetos Professor
     public void cadastrarProfessores(){
         short opcao = 0;
         do {
@@ -75,7 +80,8 @@ public class Colegio {
         } while(opcao == 1);
     }
 
-    //opcao3
+    ///Metodo de cadastro de médias em objetos Discipliina
+    //Cumpre agregação entre Disciplina e Boletim, e composição entre Boletim e Aluno
     public void cadastrarMedias(){
 
         if(alunos.size() != 0) {
@@ -116,7 +122,8 @@ public class Colegio {
         }
     }
 
-    //opcao4
+    ///Metodo de cadastro de faltas no objeto Disciplina
+    //Cumpre agregação entre Disciplina e Boletim, e composição entre Boletim e Aluno
     public void cadastrarFaltas(){
         if(alunos.size() != 0) {
 
@@ -158,7 +165,8 @@ public class Colegio {
         }
     }
 
-    //opcao5
+    ///Metodo de cadastro de objetos Turma
+    //Cumpre agregação com Aluno e Professor
     public void cadastrarTurmas(){
 
         short opcao = 0;
@@ -176,7 +184,7 @@ public class Colegio {
         }while(opcao == 1);
     }
 
-    //opcao6
+    ///Metodo de consulta de dados que envolve diretamente os objetos Aluno e Professor
     public void consultarDados(){
 
         System.out.println("Digite 1 para consultar dados de alunos ou 2 para dados de professores?");
@@ -235,7 +243,7 @@ public class Colegio {
         }
     }
 
-    //opcao7
+    ///Metodo de retorno do método mostrar dados da classe Alunos
     public void relatorioGeral() {
 
         if(alunos.size() != 0) {
@@ -258,7 +266,8 @@ public class Colegio {
         }
     }
 
-    //opcao8
+    ///Metodo de atualização de dados objetos Aluno ou Professor
+    //Cumpre agregação entre Aluno, Turma e Professor
     public void atualizarDados(){
 
         System.out.println("Digite 1 para atualizar dados de alunos ou 2 para dados de professores:");
@@ -329,7 +338,8 @@ public class Colegio {
         }
     }
 
-    //opcao 6
+    ///Metodo de atribuição de turmas
+    //Cumpre agregação entre Aluno, Turma e Professor
     public void atribuirTurmas(){
 
         System.out.println("Digite 1 para atribuir turmas a alunos ou 2 para professores:");

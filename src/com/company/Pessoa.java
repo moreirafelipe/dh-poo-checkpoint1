@@ -7,8 +7,10 @@ public abstract class Pessoa {
         this.nome = nome;
     }
 
+    //Método para relação de composição entre professores, turmas e alunos
     public abstract void atribuirTurmas(Turma turma);
 
+    //Modificadores de acesso
     public String getNome() {
         return nome;
     }

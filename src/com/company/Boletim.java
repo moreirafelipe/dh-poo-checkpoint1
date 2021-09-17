@@ -6,10 +6,10 @@ import java.util.Map;
 public class Boletim {
 
     private String periodo;
+    //Hashmap para armazenamento e organização de disciplinas por chave e valor com auto-incremento de id
     private HashMap<Integer, Disciplina> disciplinas = new HashMap<Integer, Disciplina>();
 
     public Boletim(String periodo) {
-
         this.periodo = periodo;
         this.disciplinas.put(01, new Disciplina("Portugues"));
         this.disciplinas.put(02, new Disciplina("Matematica"));
@@ -17,7 +17,7 @@ public class Boletim {
         this.disciplinas.put(04, new Disciplina("Historia"));
     }
 
-    //Mostrar relatorio de dados da classe
+    //Método para exibição de dados da classe
     public void mostrarDados(){
         System.out.println("\n--------- Histórico escolar --------\n");
         System.out.println("Período: " + getPeriodo());
@@ -34,6 +34,7 @@ public class Boletim {
         }
     }
 
+    //Método para definição de dados mediante consulta ao array de objetos
     public void definirMedias(Integer id, Double nota) {
         Disciplina resultado = this.disciplinas.get(id);
         resultado.setNota(nota);
@@ -44,6 +45,7 @@ public class Boletim {
         resultado.setFalta(faltas);
     }
 
+    //Modificador de acesso
     public String getPeriodo() {
         return periodo;
     }
