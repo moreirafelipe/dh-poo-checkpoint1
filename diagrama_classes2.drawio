@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-09-17T01:24:31.999Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36 Edg/93.0.961.47" etag="3h-mcoees8QMtNoJOT7s" version="15.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-17T01:26:53.502Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36 Edg/93.0.961.47" etag="xUZkKXWzE_JibTUi8WV_" version="15.2.7" type="github">
   <diagram id="3gxOAMbR4RBR5quXN4Fo" name="Page-1">
-    <mxGraphModel dx="1196" dy="161" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1355" dy="230" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -108,7 +108,7 @@
         <mxCell id="nOvZRza75PGBeKDB9BoI-30" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="nOvZRza75PGBeKDB9BoI-28" vertex="1">
           <mxGeometry y="80" width="160" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="nOvZRza75PGBeKDB9BoI-31" value="+ method(type): type&#xa;+ consultarnota(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="nOvZRza75PGBeKDB9BoI-28" vertex="1">
+        <mxCell id="nOvZRza75PGBeKDB9BoI-31" value="+ Disciplina(): void&#xa;+ mostrarDados(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="nOvZRza75PGBeKDB9BoI-28" vertex="1">
           <mxGeometry y="88" width="160" height="42" as="geometry" />
         </mxCell>
         <mxCell id="nOvZRza75PGBeKDB9BoI-33" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;align=left;verticalAlign=bottom;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="nOvZRza75PGBeKDB9BoI-28" edge="1">
