@@ -28,6 +28,14 @@ O objetivo deste checkpoint é utilizar conceitos de orientação a objetos apre
 
 
 
+**Cenário da aplicação e proposta de solução:**
+
+
+
+Alique **[aqui](https://github.com/FlipeFrontDev/dh-poo-checkpoint1/blob/main/Proposta%20do%20sistema-checkpoint.pdf)** para ler o texto.
+
+
+
 **Diagrama de classes:**
 
 
