@@ -1,6 +1,7 @@
 package com.company;
 
 import java.time.LocalDate;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Aluno extends Pessoa {
@@ -36,7 +37,8 @@ public class Aluno extends Pessoa {
 
     public void cadastrarMedias(){
         Scanner ler = new Scanner(System.in);
-        System.out.println("Digite o ID da disciplina: ");
+
+        System.out.println("\nDigite o ID da disciplina desejada: ");
         Integer id_disciplina = ler.nextInt();
 
         System.out.println("Digite a média: ");
@@ -50,7 +52,7 @@ public class Aluno extends Pessoa {
 
     public void cadastrarFaltas(){
         Scanner ler = new Scanner(System.in);
-        System.out.println("Digite o ID da disciplina: ");
+        System.out.println("\nDigite o ID da disciplina desejada: ");
         Integer id_disciplina = ler.nextInt();
 
         System.out.println("Digite a quantidade de faltas: ");
@@ -64,7 +66,7 @@ public class Aluno extends Pessoa {
     public void atribuirTurmas(Turma turma) {
 
         this.turma = turma;
-        System.out.println("Turma atribuida com sucesso!");
+        System.out.println("\nTurma atribuida com sucesso!");
     }
 
     @Override

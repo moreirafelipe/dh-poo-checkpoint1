@@ -35,13 +35,12 @@ public class Colegio {
 
     public void cadastrarProfessores(){
         short opcao = 0;
-
-        disciplinas.put(01, "Portugues");
-        disciplinas.put(02, "Matematica");
-        disciplinas.put(03, "Ciencias");
-        disciplinas.put(04, "Historia");
-
         do {
+            disciplinas.put(01, "Portugues");
+            disciplinas.put(02, "Matematica");
+            disciplinas.put(03, "Ciencias");
+            disciplinas.put(04, "Historia");
+
             Integer idProfessor = professores.size() + 1;
 
             System.out.println("Digite o nome do professor a ser cadastrado: ");
@@ -84,11 +83,26 @@ public class Colegio {
             short opcao = 0;
 
             do{
+                disciplinas.put(01, "Portugues");
+                disciplinas.put(02, "Matematica");
+                disciplinas.put(03, "Ciencias");
+                disciplinas.put(04, "Historia");
+
+                System.out.println("Alunos disponíveis: ");
+
+                for (Map.Entry<Integer, Aluno> aluno : alunos.entrySet()) {
+                    System.out.println( "ID: " + aluno.getKey() + "| Nome: " + aluno.getValue().getNome());
+                }
+
                 System.out.println("Digite o ID do(a) aluno(a): ");
                 Integer escolha = ler.nextInt();
 
-                Aluno resultado = alunos.get(escolha);
+                System.out.println("Disciplinas disponíveis: ");
+                for (Map.Entry<Integer, String> disciplina : disciplinas.entrySet()) {
+                    System.out.println("ID: " + disciplina.getKey() + " | Disciplina: " + disciplina.getValue());
+                }
 
+                Aluno resultado = alunos.get(escolha);
                 resultado.cadastrarMedias();
 
                 //navegar entre menus
@@ -109,8 +123,25 @@ public class Colegio {
             short opcao = 0;
 
             do {
-                System.out.println("Digite o ID do(a) aluno(a):");
+
+                disciplinas.put(01, "Portugues");
+                disciplinas.put(02, "Matematica");
+                disciplinas.put(03, "Ciencias");
+                disciplinas.put(04, "Historia");
+
+                System.out.println("Alunos disponíveis: ");
+
+                for (Map.Entry<Integer, Aluno> aluno : alunos.entrySet()) {
+                    System.out.println( "ID: " + aluno.getKey() + "| Nome: " + aluno.getValue().getNome());
+                }
+
+                System.out.println("Digite o ID do(a) aluno(a) que receberá a média:");
                 Integer escolha = ler.nextInt();
+
+                System.out.println("Disciplinas disponíveis: ");
+                for (Map.Entry<Integer, String> disciplina : disciplinas.entrySet()) {
+                    System.out.println("ID: " + disciplina.getKey() + " | Disciplina: " + disciplina.getValue());
+                }
 
                 Aluno resultado = alunos.get(escolha);
 
@@ -284,7 +315,7 @@ public class Colegio {
 
                 System.out.println("Digite o id da turma a ser atribuida:");
                 Integer idTurma = ler.nextInt();
-                Turma turma = turmas.get(idConsulta);
+                Turma turma = turmas.get(idTurma);
 
                 aluno.atribuirTurmas(turma);
 
