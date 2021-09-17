@@ -1,20 +1,20 @@
 # Readme
 
-**Programação Orientada a Objetos**
+### **Programação Orientada a Objetos**
 
-**Checkpoint**
+#### **Checkpoint**
 
-**Objetivo**
+#### **Objetivo**
 
 O objetivo deste checkpoint é utilizar conceitos de orientação a objetos apresentados durante o bimestre. O código fonte do sistema deverá ser apresentado junto com uma proposta descrevendo o cenário de aplicação e o seu diagrama de classes. O checkpoint pode ser realizado em dupla ou individual. 
 
 
 
-**REQUISITOS DO PROJETO -** **ETAPAS**:
+#### **REQUISITOS DO PROJETO -** **ETAPAS**:
 
 
 
-**Sobre a proposta:**
+#### **Sobre a proposta:**
 
 1. Características básicas:
 
@@ -28,7 +28,7 @@ O objetivo deste checkpoint é utilizar conceitos de orientação a objetos apre
 
 
 
-**Cenário da aplicação e proposta de solução:**
+#### **Cenário da aplicação e proposta de solução:**
 
 
 
@@ -36,7 +36,7 @@ Alique **[aqui](https://github.com/FlipeFrontDev/dh-poo-checkpoint1/blob/main/Pr
 
 
 
-**Diagrama de classes:**
+#### **Diagrama de classes:**
 
 
 
@@ -44,7 +44,7 @@ Alique **[aqui](https://github.com/FlipeFrontDev/dh-poo-checkpoint1/blob/main/Pr
 
 
 
-**Sobre o desenvolvimento do sistema:**
+#### **Sobre o desenvolvimento do sistema:**
 
 1. Características básicas:
 
@@ -66,7 +66,7 @@ Alique **[aqui](https://github.com/FlipeFrontDev/dh-poo-checkpoint1/blob/main/Pr
 
 
 
-**Características extras**
+#### **Características extras**
 
 1. Comentários no código para facilitar o entendimento;
 
@@ -75,8 +75,10 @@ Alique **[aqui](https://github.com/FlipeFrontDev/dh-poo-checkpoint1/blob/main/Pr
 
 
 
-**Prazos para entrega:** 
+#### **Prazos para entrega:** 
+
 Prazo para entrega do checkpoint (Enunciado + Código).  **17/09/2021 até 23:59hrs.**
 
-**Avaliação:** 
+#### **Avaliação:** 
+
 A avaliação do trabalho será feita de duas formas: Avaliação do enunciado Avaliação do código fonte.
