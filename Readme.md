@@ -40,7 +40,7 @@ Alique **[aqui](https://github.com/FlipeFrontDev/dh-poo-checkpoint1/blob/main/Pr
 
 
 
-<img src="https://i.imgur.com/Q02zzMy.png" alt="img" style="zoom:80%;" />
+![img](https://i.imgur.com/iGLXgkK.png)
 
 
 

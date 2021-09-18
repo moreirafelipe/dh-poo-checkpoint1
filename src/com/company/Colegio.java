@@ -12,9 +12,11 @@ public class Colegio {
     HashMap<Integer, Turma> turmas = new HashMap<Integer, Turma>();
     HashMap<Integer, String> disciplinas = new HashMap<Integer,String>();
 
+    Integer ultimoIdAluno = 0;
+    Integer ultimoIdProfessor = 0;
+
     //Instancia leitor de input em escopo global para uso nos métodos
     Scanner ler = new Scanner(System.in);
-
 
     //Métodos acionados pelo menu na Main
     //Metodo de cadastro de objetos Aluno
@@ -22,18 +24,20 @@ public class Colegio {
         short opcao = 0;
 
         do {
-            Integer idAluno = alunos.size() + 1;
+//            Integer idAluno = alunos.size() + 1;
 
             System.out.println("Digite o nome do aluno a ser cadastrado: ");
             String nomeAluno = ler.next();
 
-            alunos.put(idAluno, new Aluno(nomeAluno, idAluno, new Boletim("1Bim")));
+            alunos.put(ultimoIdAluno+1, new Aluno(nomeAluno, ultimoIdAluno+1, new Boletim("1Semestre")));
+            ultimoIdAluno++;
 
             System.out.println("Aluno(a) cadastrado(a) com sucesso!");
 
             //navegar entre menus
             System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
             opcao = ler.nextShort();
+
         } while(opcao == 1);
     }
 
@@ -41,22 +45,12 @@ public class Colegio {
     public void cadastrarProfessores(){
         short opcao = 0;
         do {
-            disciplinas.put(01, "Portugues");
-            disciplinas.put(02, "Matematica");
-            disciplinas.put(03, "Ciencias");
-            disciplinas.put(04, "Historia");
-
-            Integer idProfessor = professores.size() + 1;
+//            Integer idProfessor = professores.size() + 1;
 
             System.out.println("Digite o nome do professor a ser cadastrado: ");
             String nomeProfessor = ler.next();
 
-
-            System.out.println("Disciplinas disponíveis: ");
-
-            for (Map.Entry<Integer, String> disciplina : disciplinas.entrySet()) {
-                System.out.println("ID: " + disciplina.getKey() + " | Disciplina: " + disciplina.getValue());
-            }
+            consultarDisciplinas();
 
             System.out.print("\nDigite um ID válido para atribuir uma disciplina ao(à) professor(a): ");
             Integer escolha = ler.nextInt();
@@ -69,7 +63,8 @@ public class Colegio {
 
             } else {
 
-                professores.put(idProfessor, new Professor(idProfessor, nomeProfessor, idRetornado));
+                professores.put(ultimoIdProfessor+1, new Professor(ultimoIdProfessor+1, nomeProfessor, idRetornado));
+                ultimoIdProfessor++;
                 System.out.println("\nProfessor cadastrado com sucesso!");
 
             }
@@ -82,35 +77,37 @@ public class Colegio {
 
     ///Metodo de cadastro de médias em objetos Discipliina
     //Cumpre agregação entre Disciplina e Boletim, e composição entre Boletim e Aluno
-    public void cadastrarMedias(){
+    public void cadastrarNotas(){
 
         if(alunos.size() != 0) {
 
             short opcao = 0;
 
             do{
-                disciplinas.put(01, "Portugues");
-                disciplinas.put(02, "Matematica");
-                disciplinas.put(03, "Ciencias");
-                disciplinas.put(04, "Historia");
-
-                System.out.println("Alunos disponíveis: ");
-
-                for (Map.Entry<Integer, Aluno> aluno : alunos.entrySet()) {
-                    System.out.println( "ID: " + aluno.getKey() + "| Nome: " + aluno.getValue().getNome());
-                }
+                consultarAlunos();
 
                 System.out.println("Digite o ID do(a) aluno(a): ");
                 Integer escolha = ler.nextInt();
 
-                System.out.println("Disciplinas disponíveis: ");
-                for (Map.Entry<Integer, String> disciplina : disciplinas.entrySet()) {
-                    System.out.println("ID: " + disciplina.getKey() + " | Disciplina: " + disciplina.getValue());
-                }
-
                 Aluno resultado = alunos.get(escolha);
-                resultado.cadastrarMedias();
 
+                if (resultado != null) {
+
+                    consultarDisciplinas();
+
+                    System.out.println("Digite o ID da disciplina desejada: ");
+                    Integer escolhaDisc = ler.nextInt();
+
+                    String disciplina = disciplinas.get(escolhaDisc);
+
+                    if (disciplina != null) {
+                        resultado.cadastrarNotas(escolhaDisc);
+                    } else {
+                        System.out.println("Por favor, digite um ID de disciplina válido!");
+                    }
+                } else {
+                    System.out.println("Por favor, digite um ID de aluno válido!");
+                }
                 //navegar entre menus
                 System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
                 opcao = ler.nextShort();
@@ -130,25 +127,12 @@ public class Colegio {
             short opcao = 0;
 
             do {
-
-                disciplinas.put(01, "Portugues");
-                disciplinas.put(02, "Matematica");
-                disciplinas.put(03, "Ciencias");
-                disciplinas.put(04, "Historia");
-
-                System.out.println("Alunos disponíveis: ");
-
-                for (Map.Entry<Integer, Aluno> aluno : alunos.entrySet()) {
-                    System.out.println( "ID: " + aluno.getKey() + "| Nome: " + aluno.getValue().getNome());
-                }
+                consultarAlunos();
 
                 System.out.println("Digite o ID do(a) aluno(a) que receberá a média:");
                 Integer escolha = ler.nextInt();
 
-                System.out.println("Disciplinas disponíveis: ");
-                for (Map.Entry<Integer, String> disciplina : disciplinas.entrySet()) {
-                    System.out.println("ID: " + disciplina.getKey() + " | Disciplina: " + disciplina.getValue());
-                }
+                consultarDisciplinas();
 
                 Aluno resultado = alunos.get(escolha);
 
@@ -175,10 +159,14 @@ public class Colegio {
             System.out.println("Digite o ID da nova turma:");
             Integer idTurma = ler.nextInt();
 
-            turmas.put(idTurma,new Turma(idTurma));
+            Turma turma = turmas.get(idTurma);
 
-            System.out.println("Turma " + idTurma + " cadastrada com sucesso!");
-
+            if(turma == null) {
+                turmas.put(idTurma,new Turma(idTurma));
+                System.out.println("Turma " + idTurma + " cadastrada com sucesso!");
+            } else {
+                System.out.println("Turma já cadastrada.");
+            }
             System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
             opcao = ler.nextShort();
         }while(opcao == 1);
@@ -195,21 +183,20 @@ public class Colegio {
             short opcao = 0;
 
             do {
-
-                System.out.println("Alunos disponíveis: ");
-
-                for (Map.Entry<Integer, Aluno> aluno : alunos.entrySet()) {
-                    System.out.println( "ID: " + aluno.getKey() + "| Nome: " + aluno.getValue().getNome());
-                }
+                consultarAlunos();
 
                 System.out.println("Digite o id do aluno a ser consultado: ");
                 Integer idConsulta = ler.nextInt();
 
                 Aluno aluno = alunos.get(idConsulta);
-                aluno.mostrarDados();
 
+                if(aluno != null) {
+                    aluno.mostrarDados();
+                } else {
+                    System.out.println("Por favor, informe um ID válido!");
+                }
                 //navegar entre menus
-                System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
+                System.out.println("\nDigite 1 para repetir a ação ou qualquer outro numero para sair");
                 opcao = ler.nextShort();
 
             } while(opcao == 1);
@@ -219,20 +206,20 @@ public class Colegio {
             short opcao = 0;
 
             do{
-                System.out.println("Professores disponíveis: ");
-
-                for (Map.Entry<Integer, Professor> professor : professores.entrySet()) {
-                    System.out.println( "ID: " + professor.getKey() + "| Nome: " + professor.getValue().getNome());
-                }
+                consultarProfessores();
 
                 System.out.println("Digite o id do professor a ser consultado: ");
                 Integer idConsulta = ler.nextInt();
 
                 Professor professor = professores.get(idConsulta);
-                professor.mostrarDados();
 
+                if(professor != null) {
+                    professor.mostrarDados();
+                } else {
+                    System.out.println("Por favor, informe um ID válido!");
+                }
                 //navegar entre menus
-                System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
+                System.out.println("\nDigite 1 para repetir a ação ou qualquer outro numero para sair");
                 opcao = ler.nextShort();
 
             } while(opcao == 1);
@@ -278,12 +265,7 @@ public class Colegio {
             short opcao = 0;
 
             do {
-
-                System.out.println("Alunos disponíveis: ");
-
-                for (Map.Entry<Integer, Aluno> aluno : alunos.entrySet()) {
-                    System.out.println( "ID: " + aluno.getKey() + "| Nome: " + aluno.getValue().getNome());
-                }
+                consultarAlunos();
 
                 System.out.println("Digite o id do aluno a ser alterado: ");
                 Integer idConsulta = ler.nextInt();
@@ -309,11 +291,7 @@ public class Colegio {
 
             do{
 
-                System.out.println("Professores disponíveis: ");
-
-                for (Map.Entry<Integer, Professor> professor : professores.entrySet()) {
-                    System.out.println( "ID: " + professor.getKey() + "| Nome: " + professor.getValue().getNome());
-                }
+                consultarProfessores();
 
                 System.out.println("Digite o id do professor a ser alterado: ");
                 Integer idConsulta = ler.nextInt();
@@ -350,30 +328,31 @@ public class Colegio {
             short opcao = 0;
 
             do {
-
-                System.out.println("Alunos disponíveis: ");
-
-                for (Map.Entry<Integer, Aluno> aluno : alunos.entrySet()) {
-                    System.out.println( "ID: " + aluno.getKey() + "| Nome: " + aluno.getValue().getNome());
-                }
+                consultarAlunos();
 
                 System.out.println("Digite o id do aluno a receber turma: ");
                 Integer idConsulta = ler.nextInt();
 
                 Aluno aluno = alunos.get(idConsulta);
 
+                if(aluno != null) {
 
-                System.out.println("Turmas cadastradas: ");
+                    consultarTurmas();
 
-                for (Map.Entry<Integer, Turma> turma : turmas.entrySet()) {
-                    System.out.println("ID: " + turma.getKey() + " | Turma: " + turma.getValue().getId_turmas());
+                    System.out.println("Digite o id da turma a ser atribuida:");
+                    Integer idTurma = ler.nextInt();
+
+                    Turma turma = turmas.get(idTurma);
+
+                    if(turma != null){
+                        aluno.atribuirTurmas(turma);
+                    } else {
+                        System.out.println("Por favor, digite um ID válido!");
+                    }
+
+                } else {
+                    System.out.println("Por favor, digite um ID válido!");
                 }
-
-                System.out.println("Digite o id da turma a ser atribuida:");
-                Integer idTurma = ler.nextInt();
-                Turma turma = turmas.get(idTurma);
-
-                aluno.atribuirTurmas(turma);
 
                 //navegar entre menus
                 System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
@@ -383,28 +362,20 @@ public class Colegio {
 
         } else if (escolha == 2 && professores.size() != 0 && turmas.size() !=0) {
 
-            Integer idTurma = turmas.size() + 1;
+//            Integer idTurma = turmas.size() + 1;
 
             short opcao = 0;
 
             do{
 
-                System.out.println("Professores disponíveis: ");
-
-                for (Map.Entry<Integer, Professor> professor : professores.entrySet()) {
-                    System.out.println( "ID: " + professor.getKey() + "| Nome: " + professor.getValue().getNome());
-                }
+                consultarProfessores();
 
                 System.out.println("Digite o id do professor a receber turma: ");
                 Integer idConsulta = ler.nextInt();
 
                 Professor professor = professores.get(idConsulta);
 
-                System.out.println("Turmas cadastradas: ");
-
-                for (Map.Entry<Integer, Turma> turma : turmas.entrySet()) {
-                    System.out.println("ID: " + turma.getKey() + " | Turma: " + turma.getValue().getId_turmas());
-                }
+                consultarTurmas();
 
                 System.out.println("Digite o id da turma a ser atribuida:");
                 Integer idTurmaProf = ler.nextInt();
@@ -424,5 +395,167 @@ public class Colegio {
                     " para realizar " +
                     "consultas!");
         }
+    }
+
+    //método para excluir objetos Aluno
+    public void encerrarMatricula() {
+
+        short opcao = 0;
+
+        do {
+            if(alunos.size() != 0) {
+
+                System.out.println("Selescione o ID do aluno para encerrar sua matrícula:");
+
+                consultarAlunos();
+
+                Integer idAluno  = ler.nextInt();
+
+                if(alunos.get(idAluno) != null){
+
+                    alunos.remove(idAluno);
+
+                    System.out.println("Matricula encerrada com sucesso!");
+                    System.out.println("Lista de alunos atualizada:");
+
+                    consultarAlunos();
+
+                } else {
+                    System.out.println("Por favor, digite um ID de aluno válido!");
+                }
+                //navegar entre menus
+                System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
+                opcao = ler.nextShort();
+            } else {
+                System.out.println("Não há dados cadastrados para a opção selecionada. Cadastre dados para realizar " +
+                        "consultas!");
+            }
+        } while(opcao == 1);
+    }
+
+    //método para excluir objetos Turma
+    public void encerrarTurma() {
+
+        short opcao = 0;
+
+        do {
+
+            if (turmas.size() != 0) {
+
+                System.out.println("Selescione o ID da turma a ser encerrada:");
+
+                consultarTurmas();
+
+                Integer idTurma  = ler.nextInt();
+
+                if(turmas.get(idTurma) != null){
+
+                    turmas.remove(idTurma);
+
+                    System.out.println("Turma encerrada com sucesso!");
+                    System.out.println("Lista de turmas atualizada:");
+
+                    consultarTurmas();
+
+                } else {
+                    System.out.println("Por favor, digite um ID de tutrma válido!");
+                }
+                //navegar entre menus
+                System.out.println("Digite 1 para repetir a ação ou qualquer outro numero para sair");
+                opcao = ler.nextShort();
+            } else {
+                System.out.println("Não há dados cadastrados para a opção selecionada. Cadastre dados para realizar " +
+                        "consultas!");
+            }
+        } while(opcao == 1);
+    }
+
+    //Métodos de exibição de dados cadastrados
+    public void consultarAlunos() {
+        System.out.println("Alunos disponíveis: ");
+        for (Map.Entry<Integer, Aluno> aluno : alunos.entrySet()) {
+            System.out.println( "ID: " + aluno.getKey() + "| Nome: " + aluno.getValue().getNome());
+        }
+    }
+
+    public void consultarProfessores() {
+        System.out.println("Professores disponíveis: ");
+        for (Map.Entry<Integer, Professor> professor : professores.entrySet()) {
+            System.out.println( "ID: " + professor.getKey() + "| Nome: " + professor.getValue().getNome());
+        }
+    }
+
+    public void consultarDisciplinas() {
+        System.out.println("Disciplinas disponíveis: ");
+        for (Map.Entry<Integer, String> disciplina : disciplinas.entrySet()) {
+            System.out.println("ID: " + disciplina.getKey() + " | Disciplina: " + disciplina.getValue());
+        }
+    }
+
+    public void consultarTurmas(){
+        System.out.println("Turmas cadastradas: ");
+        for (Map.Entry<Integer, Turma> turma : turmas.entrySet()) {
+            System.out.println("ID: " + turma.getKey() + " | Turma: " + turma.getValue().getId_turmas());
+        }
+    }
+
+    public void popularDados() {
+
+        Colegio colegio = new Colegio();
+        Scanner ler = new Scanner(System.in);
+
+        short opcao = 0;
+
+        do {
+
+            Integer qtdAlunosAtual = alunos.size();
+            Integer qtdProfessoresAtual = professores.size();
+            Integer qtdTurmasAtual = turmas.size();
+
+            //Populando alunos
+            alunos.put(ultimoIdAluno+1, new Aluno("Felipe", ultimoIdAluno+1, new Boletim("1ºSemestre")));
+            ultimoIdAluno++;
+
+            alunos.put(ultimoIdAluno+1, new Aluno("Maria", ultimoIdAluno+1,
+                    new Boletim("1ºSemestre")));
+            ultimoIdAluno++;
+
+            alunos.put(ultimoIdAluno+1, new Aluno("José", ultimoIdAluno+1, new Boletim("1ºSemestre")));
+            ultimoIdAluno++;
+
+            //Populando professores
+            professores.put(ultimoIdProfessor+1, new Professor(ultimoIdProfessor+1, "Pacheco",
+                    "Portugues"));
+            ultimoIdProfessor++;
+
+            professores.put(ultimoIdProfessor+1, new Professor(ultimoIdProfessor+1, "Ana Rosa",
+                    "Matematica"));
+            ultimoIdProfessor++;
+
+            professores.put(ultimoIdProfessor+1, new Professor(ultimoIdProfessor+1, "Picolino",
+                    "Historia"));
+            ultimoIdProfessor++;
+
+            //populando turmas
+            turmas.put(turmas.size()+1,new Turma(turmas.size()+1));
+            turmas.put(turmas.size()+1,new Turma(turmas.size()+1));
+            turmas.put(turmas.size()+1,new Turma(turmas.size()+1));
+
+            System.out.println("\nDados adicionados com sucesso!");
+
+            System.out.println("Dados adicionados: ");
+            System.out.println("Alunos: " + (alunos.size() - qtdAlunosAtual));
+            System.out.println("Professores: " + (professores.size() - qtdProfessoresAtual));
+            System.out.println("Turmas: " + (turmas.size() - qtdTurmasAtual));
+
+            System.out.println("\nDados atuais: ");
+            System.out.println("Alunos: " + (alunos.size()));
+            System.out.println("Professores: " + (professores.size()));
+            System.out.println("Turmas: " + (turmas.size()));
+
+            System.out.println("\nDigite 1 para repetir a ação ou qualquer outro numero para sair");
+            opcao = ler.nextShort();
+
+        } while(opcao == 1);
     }
 }

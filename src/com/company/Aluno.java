@@ -16,7 +16,9 @@ public class Aluno extends Pessoa {
 
     //Método para exibição de dados da classe
     public void mostrarDados(){
-        System.out.println("\n---------Dados do(a) aluno(a)--------\n");
+        System.out.println("||-------------------------------------------------------------------------------||");
+        System.out.println("                                 Dados do aluno                                    ");
+        System.out.println("||-------------------------------------------------------------------------------||");
         System.out.println("ID: " + this.getId_alunos());
         System.out.println("Nome: " + this.getNome());
 
@@ -29,18 +31,15 @@ public class Aluno extends Pessoa {
         this.boletim.mostrarDados();
     }
 
-    public void cadastrarMedias(){
-        Scanner ler = new Scanner(System.in);
+    public void cadastrarNotas(Integer id){
 
-        System.out.println("\nDigite o ID da disciplina desejada: ");
-        Integer id_disciplina = ler.nextInt();
+        this.boletim.definirNotas(id);
+//        System.out.println("Digite a média: ");
+//        Double media = ler.nextDouble();
 
-        System.out.println("Digite a média: ");
-        Double media = ler.nextDouble();
-
-        this.boletim.definirMedias(id_disciplina, media);
-
-        System.out.println("Média cadastrada com sucesso!");
+//        this.boletim.definirMedias(id_disciplina, media);
+//
+//        System.out.println("Média cadastrada com sucesso!");
     }
 
 
