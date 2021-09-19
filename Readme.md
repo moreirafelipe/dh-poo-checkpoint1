@@ -77,7 +77,7 @@ Alique **[aqui](https://github.com/FlipeFrontDev/dh-poo-checkpoint1/blob/main/Pr
 
 #### **Prazos para entrega:** 
 
-Prazo para entrega do checkpoint (Enunciado + Código).  **17/09/2021 até 23:59hrs.**
+Prazo para entrega do checkpoint (Enunciado + Código).  **20/09/2021 até 23:59hrs.**
 
 #### **Avaliação:** 
 
