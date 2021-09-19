@@ -1,38 +1,26 @@
 # Readme
 
-### **Programação Orientada a Objetos**
-
-#### **Checkpoint**
-
-#### **Objetivo**
-
-O objetivo deste checkpoint é utilizar conceitos de orientação a objetos apresentados durante o bimestre. O código fonte do sistema deverá ser apresentado junto com uma proposta descrevendo o cenário de aplicação e o seu diagrama de classes. O checkpoint pode ser realizado em dupla ou individual. 
+## Formação Certfied Tech Developer - Digital House Brasil
 
 
 
-#### **REQUISITOS DO PROJETO -** **ETAPAS**:
+### Projeto de avaliação - Checkpoint 1
+
+### Disciplina: **Programação Orientada a Objetos** - Java
 
 
 
-#### **Sobre a proposta:**
+#### Integrantes:
 
-1. Características básicas:
+[**Felipe Moreira**](https://github.com/FlipeFrontDev)
 
-   ​	a. Criar uma nova proposta para um problema a ser solucionado. O texto com a definição da proposta deverá conter no 		mínimo 3 (três) parágrafos: Uma introdução explicando o problema de forma geral; 
-
-   ​	a. Um parágrafo descrevendo o cenário da aplicação;
-
-   ​	b. Um ou mais parágrafos com os dados para solucionar o problema;
-
-   ​	c. Criação e apresentação do diagrama de classes com a descrição dos atributos e métodos do sistema.
+<u>**[Tânia Rita](https://github.com/taniarita)**</u>
 
 
 
-#### **Cenário da aplicação e proposta de solução:**
+#### **Cenário da aplicação**
 
-
-
-Alique **[aqui](https://github.com/FlipeFrontDev/dh-poo-checkpoint1/blob/main/Proposta%20do%20sistema-checkpoint.pdf)** para ler o texto.
+A proposta é a criação de um sistema que vai reduzir o problema da desorganização de dados enfrentado por muitas instituições de ensino. A desorganização dificulta a tarefa de armazenamento dos dados, bem como a consulta das informações geradas por eles. Ao centralizar todas as informações relevantes ao contexto de aplicação - no caso, um colégio - o sistema vai possibilitar a melhoria dos processos de gestão, inclusão de dados de alunos e professores, e a otimização do tempo dos funcionários da instituição.
 
 
 
@@ -44,41 +32,13 @@ Alique **[aqui](https://github.com/FlipeFrontDev/dh-poo-checkpoint1/blob/main/Pr
 
 
 
-#### **Sobre o desenvolvimento do sistema:**
+#### **Proposta de solução**
 
-1. Características básicas:
-
-   a. Ser orientado a objetos;
-
-   b. Usar a classe Principal para receber as entradas do usuário;
-
-   
-
-2. Tópicos da disciplina que deverão ser contemplados e que serão avaliados no projeto:
-
-   a. Classes (atributos e métodos), Construtores, Encapsulamento;
-
-   ​	i: No mínimo 4 classes (Não considerando a classe principal com método main);
-
-   b. Implementar os conceitos de sobrecarga/sobreescrita (de métodos e construtores);
-
-   c. Implementar o conceito de herança, classe abstrata e/ou interface.
+Trata-se de um sistema genérico de cadastro e consulta que pode ser aplicado a diversos contextos. No caso em questão, serve para armazenar dados de Alunos, suas médias e faltas; dados de Professores e Turmas - possibilitando articular o tipo de relação existente entre esses dados. Por exemplo, é possível cadastrar as classes Aluno e Professor pelo atributo do nome, que têm seus id 's auto incrementados. A partir disso, em Aluno, pode-se cadastrar e consultar as médias, faltas e Turma pelo id, e em Professor, o atributo auto incrementado possibilita a consulta da Turma. 
+As disciplinas estão disponibilizadas em forma de array e possuem seus respectivos id 's fixos, sendo que Português tem o id 01, Matemática id 02, Ciências id 03 e História id 04. Os dados necessários para a solução do problema são os nomes (de alunos e professores); os id ́ s auto incrementados, que podem ser consultados na opção de consultar dados, e, por fim, os id 's das matérias, que já são fornecidos pelo sistema.
 
 
 
-#### **Características extras**
+#### **Conceitos aplicados**
 
-1. Comentários no código para facilitar o entendimento;
-
-2. Formatação de código;
-3. Validação de entrada de dados.
-
-
-
-#### **Prazos para entrega:** 
-
-Prazo para entrega do checkpoint (Enunciado + Código).  **20/09/2021 até 23:59hrs.**
-
-#### **Avaliação:** 
-
-A avaliação do trabalho será feita de duas formas: Avaliação do enunciado Avaliação do código fonte.
+No sistema foram contemplados os conceitos de Classes e Atributos, Construtores e Encapsulamento por meio de seis classes: Pessoa, Aluno, Professor, Boletim, Disciplinas, Turma e, por fim, o menu iniciado na clase Main, que recebe todas as entradas de usuários que são repassadas à classe Colégio que, por sua vez, requisita métodos das classes especificas quando necessário. Também foram implementadas a sobrecarga e sobrescrita de métodos e construtores em cada uma das classes criadas, bem como o conceito de herança por meio da classe abstrata Pessoa, cujos atributos são herdados pelas classes Aluno e Professor. 
