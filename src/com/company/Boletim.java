@@ -57,7 +57,7 @@ public class Boletim {
         short opcao = ler.nextShort();
 
 
-        if(opcao <= 4){
+        if(opcao != 0 && opcao <= 4){
 
             System.out.println("Digite a nota para a Avaliação: " + opcao);
             Double lerNota = ler.nextDouble();

@@ -256,7 +256,6 @@ public class Colegio {
     ///Metodo de atualização de dados objetos Aluno ou Professor
     //Cumpre agregação entre Aluno, Turma e Professor
     public void atualizarDados(){
-
         System.out.println("Digite 1 para atualizar dados de alunos ou 2 para dados de professores:");
         short escolha = ler.nextShort();
 
@@ -319,7 +318,6 @@ public class Colegio {
     ///Metodo de atribuição de turmas
     //Cumpre agregação entre Aluno, Turma e Professor
     public void atribuirTurmas(){
-
         System.out.println("Digite 1 para atribuir turmas a alunos ou 2 para professores:");
         short escolha = ler.nextShort();
 
@@ -367,7 +365,6 @@ public class Colegio {
             short opcao = 0;
 
             do{
-
                 consultarProfessores();
 
                 System.out.println("Digite o id do professor a receber turma: ");
@@ -404,7 +401,6 @@ public class Colegio {
 
         do {
             if(alunos.size() != 0) {
-
                 System.out.println("Selescione o ID do aluno para encerrar sua matrícula:");
 
                 consultarAlunos();
@@ -443,13 +439,11 @@ public class Colegio {
             if (turmas.size() != 0) {
 
                 System.out.println("Selescione o ID da turma a ser encerrada:");
-
                 consultarTurmas();
 
                 Integer idTurma  = ler.nextInt();
 
                 if(turmas.get(idTurma) != null){
-
                     turmas.remove(idTurma);
 
                     System.out.println("Turma encerrada com sucesso!");

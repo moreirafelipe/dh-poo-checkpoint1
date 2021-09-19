@@ -34,12 +34,7 @@ public class Aluno extends Pessoa {
     public void cadastrarNotas(Integer id){
 
         this.boletim.definirNotas(id);
-//        System.out.println("Digite a média: ");
-//        Double media = ler.nextDouble();
 
-//        this.boletim.definirMedias(id_disciplina, media);
-//
-//        System.out.println("Média cadastrada com sucesso!");
     }
 
 

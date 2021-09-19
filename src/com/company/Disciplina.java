@@ -29,14 +29,14 @@ public class Disciplina {
 
         if(this.nota1 != null)
             media += nota1;
-        else if(this.nota2 != null)
+        if(this.nota2 != null)
             media += nota2;
-        else if(this.nota3 != null)
+        if(this.nota3 != null)
             media += nota3;
-        else if(this.nota4 != null)
+        if(this.nota4 != null)
             media += nota4;
 
-        media = media / 4;
+        setMedia(media / 4);
 
         if(media != null) {
 
@@ -46,15 +46,12 @@ public class Disciplina {
 
             System.out.print("Notas cadastradas: ");
 
-            System.out.println(
-                    this.getNota1() != null ? "1º Bim: " + this.getNota1() + " | " :
-                            this.getNota2() != null ? "2º Bim: " + this.getNota2() + " | " :
-                                    this.getNota3() != null ? "3º Bim: " + this.getNota3() + " | ":
-                                            this.getNota4() != null ? "4º Bim: " + this.getNota4() + " | " : "sem " +
-                                                    "notas cadastradas até o momento."
-            );
+            System.out.print(this.getNota1() != null ? " | 1º Bim: " + this.getNota1() : "");
+            System.out.print(this.getNota2() != null ? " | 2º Bim: " + this.getNota2() : "");
+            System.out.print(this.getNota3() != null ? " | 3º Bim: " + this.getNota3() : "");
+            System.out.print(this.getNota4() != null ? " | 4º Bim: " + this.getNota4() : "");
 
-            System.out.println("Faltas: " + this.getFalta());
+            System.out.println("\nFaltas: " + this.getFalta());
 
             if(this.getFalta() > 10) {
                 System.out.println("Situação: REPROVADO POR FALTAS!");
