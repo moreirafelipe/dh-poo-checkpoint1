@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-09-19T01:55:13.695Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36 Edg/93.0.961.52" etag="09ljXYepA6KJz-4s1glp" version="15.2.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-19T18:43:41.374Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36 Edg/93.0.961.52" etag="tlTj9gaYiXImjbaMAMq3" version="15.2.9" type="github">
   <diagram id="3gxOAMbR4RBR5quXN4Fo" name="Page-1">
-    <mxGraphModel dx="3390" dy="964" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2692" dy="579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -20,8 +20,8 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="400" y="810" />
-              <mxPoint x="400" y="790" />
-              <mxPoint x="109" y="790" />
+              <mxPoint x="400" y="770" />
+              <mxPoint x="89" y="770" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -37,13 +37,11 @@
         <mxCell id="QVgde0wYcYvtslcCwDm_-12" value="+ mostrarDados(): void&#xa;+ atribuirTurmas(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="QVgde0wYcYvtslcCwDm_-9" vertex="1">
           <mxGeometry y="98" width="185.71" height="52" as="geometry" />
         </mxCell>
-        <mxCell id="G0VVWm4dyd2l9YODS6ji-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.397;entryY=0.992;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;endArrow=block;endFill=0;" parent="1" source="QVgde0wYcYvtslcCwDm_-17" target="nOvZRza75PGBeKDB9BoI-10" edge="1">
+        <mxCell id="G0VVWm4dyd2l9YODS6ji-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=block;endFill=0;" parent="1" source="QVgde0wYcYvtslcCwDm_-17" target="nOvZRza75PGBeKDB9BoI-10" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-120" y="790" />
-              <mxPoint x="57" y="790" />
-              <mxPoint x="57" y="780" />
-              <mxPoint x="57" y="780" />
+              <mxPoint x="-120" y="770" />
+              <mxPoint x="89" y="770" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -56,20 +54,20 @@
         <mxCell id="QVgde0wYcYvtslcCwDm_-19" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="QVgde0wYcYvtslcCwDm_-17" vertex="1">
           <mxGeometry y="90" width="240" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="QVgde0wYcYvtslcCwDm_-20" value="+ Alunos(String nome,&#xa;                int id_alunos,&#xa;                Boletim boletim)&#xa;&#xa;+ mostrarDados(): void&#xa;+ cadastrarMedias(): void&#xa;+ cadastrarFaltas(): void&#xa;+ atribuirTurmas(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="QVgde0wYcYvtslcCwDm_-17" vertex="1">
+        <mxCell id="QVgde0wYcYvtslcCwDm_-20" value="+ Alunos(String nome,&#xa;                int id_alunos,&#xa;                Boletim boletim)&#xa;&#xa;+ mostrarDados(): void&#xa;+ cadastrarNotas(): void&#xa;+ cadastrarFaltas(): void&#xa;+ atribuirTurmas(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="QVgde0wYcYvtslcCwDm_-17" vertex="1">
           <mxGeometry y="98" width="240" height="172" as="geometry" />
         </mxCell>
         <mxCell id="nOvZRza75PGBeKDB9BoI-7" value="&lt;&lt;abstract&gt;&gt;&#xa;Pessoa" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#FFD966;" parent="1" vertex="1">
-          <mxGeometry x="-22" y="625" width="200" height="130" as="geometry" />
+          <mxGeometry x="-60" y="560" width="302" height="150" as="geometry" />
         </mxCell>
         <mxCell id="nOvZRza75PGBeKDB9BoI-8" value="- nome: String&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="nOvZRza75PGBeKDB9BoI-7" vertex="1">
-          <mxGeometry y="40" width="200" height="30" as="geometry" />
+          <mxGeometry y="40" width="302" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nOvZRza75PGBeKDB9BoI-9" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="nOvZRza75PGBeKDB9BoI-7" vertex="1">
-          <mxGeometry y="70" width="200" height="8" as="geometry" />
+          <mxGeometry y="70" width="302" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="nOvZRza75PGBeKDB9BoI-10" value="+ Pessoa(String nome)&#xa;+ abstract atribuirTurmas(Turma turma)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="nOvZRza75PGBeKDB9BoI-7" vertex="1">
-          <mxGeometry y="78" width="200" height="52" as="geometry" />
+        <mxCell id="nOvZRza75PGBeKDB9BoI-10" value="+ Pessoa(String nome)&#xa;+ abstract atribuirTurmas(Turma turma)&#xa;+ abstract mostrarDados(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="nOvZRza75PGBeKDB9BoI-7" vertex="1">
+          <mxGeometry y="78" width="302" height="72" as="geometry" />
         </mxCell>
         <mxCell id="nOvZRza75PGBeKDB9BoI-13" value="Boletim" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#FFE599;" parent="1" vertex="1">
           <mxGeometry x="-526.5" y="876" width="190" height="190" as="geometry" />
@@ -165,7 +163,7 @@
             <mxPoint x="290" y="1090" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cHxrXS1dNZ95rzIePe39-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=0;endArrow=block;endFill=0;targetPerimeterSpacing=12;entryX=0.468;entryY=1.057;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.001;exitY=0.534;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="G0VVWm4dyd2l9YODS6ji-2" target="QVgde0wYcYvtslcCwDm_-12">
+        <mxCell id="cHxrXS1dNZ95rzIePe39-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=0;endArrow=block;endFill=0;targetPerimeterSpacing=12;entryX=0.468;entryY=1.057;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.001;exitY=0.534;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="G0VVWm4dyd2l9YODS6ji-2" target="QVgde0wYcYvtslcCwDm_-12" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="-610" y="708" />
