@@ -1,6 +1,6 @@
 # Readme
 
-## Formação Certfied Tech Developer - Digital House Brasil
+## Formação Certified Tech Developer - Digital House Brasil
 
 
 
