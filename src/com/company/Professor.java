@@ -4,8 +4,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Professor extends Pessoa {
-
-
     private int id_professor;
     private String disciplina;
 
@@ -19,10 +17,23 @@ public class Professor extends Pessoa {
         this.turmas = turmas;
     }
 
+    //Modificador de acesso da classe
+    public String getDisciplina() {
+        return disciplina;
+    }
 
-    //Método para exibição de dados da classe
-    public void mostrarDados(){
-        System.out.println("\n---------Dados do(a) Professor(a)--------\n");
+    //Sobreescrevendo métodos da super-classe abstrata
+
+    @Override
+    public void atribuirTurmas(Turma turma) {
+        this.turmas.add(turma);
+        System.out.println("Turma atribuida com sucesso!");
+    }
+
+    @Override
+    public void mostrarDados() {
+        System.out.println("                          Dados do professor: " + this.getNome()                    );
+        System.out.println("||-------------------------------------------------------------------------------||");
         System.out.println("\nDados do professor: " +
                 "\nID do(a) professor(a): " + id_professor +
                 "\nNome: " + this.getNome() +
@@ -38,21 +49,12 @@ public class Professor extends Pessoa {
         }
     }
 
-
-    //Sobreescrevendo modificador de acesso
-    @Override
-    public void atribuirTurmas(Turma turma) {
-        this.turmas.add(turma);
-        System.out.println("Turma atribuida com sucesso!");
-    }
-
     @Override
     public void setNome(String nome) {
         super.setNome(nome);
     }
-
-    //Modificador de acesso
-    public String getDisciplina() {
-        return disciplina;
+    public String getNome() {
+        return super.getNome();
     }
+
 }

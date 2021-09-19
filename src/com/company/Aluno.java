@@ -14,10 +14,29 @@ public class Aluno extends Pessoa {
         this.boletim = boletim; //boletim não pode ser em arrays
     }
 
-    //Método para exibição de dados da classe
-    public void mostrarDados(){
-        System.out.println("||-------------------------------------------------------------------------------||");
-        System.out.println("                                 Dados do aluno                                    ");
+    public void cadastrarNotas(Integer id){
+        this.boletim.definirNotas(id);
+    }
+
+    public void cadastrarFaltas(){
+        Scanner ler = new Scanner(System.in);
+        System.out.println("\nDigite o ID da disciplina desejada: ");
+        Integer id_disciplina = ler.nextInt();
+        System.out.println("Digite a quantidade de faltas: ");
+        int faltas = ler.nextInt();
+        this.boletim.definirFaltas(id_disciplina, faltas);
+        System.out.println("Faltas cadastradas com sucesso!");
+    }
+
+    @Override
+    public void atribuirTurmas(Turma turma) {
+        this.turma = turma;
+        System.out.println("\nTurma atribuida com sucesso!");
+    }
+
+    @Override
+    public void mostrarDados() {
+        System.out.println("                            Dados do aluno: " + this.getNome()                      );
         System.out.println("||-------------------------------------------------------------------------------||");
         System.out.println("ID: " + this.getId_alunos());
         System.out.println("Nome: " + this.getNome());
@@ -29,31 +48,6 @@ public class Aluno extends Pessoa {
         }
 
         this.boletim.mostrarDados();
-    }
-
-    public void cadastrarNotas(Integer id){
-
-        this.boletim.definirNotas(id);
-
-    }
-
-
-    public void cadastrarFaltas(){
-        Scanner ler = new Scanner(System.in);
-        System.out.println("\nDigite o ID da disciplina desejada: ");
-        Integer id_disciplina = ler.nextInt();
-
-        System.out.println("Digite a quantidade de faltas: ");
-        int faltas = ler.nextInt();
-
-        this.boletim.definirFaltas(id_disciplina, faltas);
-        System.out.println("Faltas cadastradas com sucesso!");
-    }
-
-    @Override
-    public void atribuirTurmas(Turma turma) {
-        this.turma = turma;
-        System.out.println("\nTurma atribuida com sucesso!");
     }
 
     //Sobreescrevendo modificadores de acesso

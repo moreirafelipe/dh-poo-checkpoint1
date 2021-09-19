@@ -5,17 +5,7 @@ import java.util.ArrayList;
 public class Disciplina {
 
     private String nome;
-//    private Double nota;
-
-    //testando notas para media
-    private Double nota1;
-    private Double nota2;
-    private Double nota3;
-    private Double nota4;
-    private Double media;
-
-//    private ArrayList<Double> notas = new ArrayList<>();
-
+    private Double nota1, nota2, nota3, nota4, media;
     private int falta = 0;
 
     public Disciplina(String nome) {
@@ -39,8 +29,6 @@ public class Disciplina {
         setMedia(media / 4);
 
         if(media != null) {
-
-            System.out.println("||-------------------------------------------------------------------------------||");
             System.out.println("                          Disciplina: " + this.getNome()                            );
             System.out.println("||-------------------------------------------------------------------------------||");
 
@@ -75,55 +63,29 @@ public class Disciplina {
     public String getNome() {
         return nome;
     }
-
     public Double getNota1() {
         return nota1;
     }
-
     public Double getNota2() {
         return nota2;
     }
-
     public Double getNota3() {
         return nota3;
     }
-
     public Double getNota4() {
         return nota4;
     }
-
     public Double getMedia() {
         return media;
     }
-
-    public void setNota1(Double nota1) {
-        this.nota1 = nota1;
-        System.out.println("Nota atribuida com sucesso!");
-    }
-
-    public void setNota2(Double nota2) {
-        this.nota2 = nota2;
-        System.out.println("Nota atribuida com sucesso!");
-    }
-
-    public void setNota3(Double nota3) {
-        this.nota3 = nota3;
-        System.out.println("Nota atribuida com sucesso!");
-    }
-
-    public void setNota4(Double nota4) {
-        this.nota4 = nota4;
-        System.out.println("Nota atribuida com sucesso!");
-    }
-
-    public void setMedia(Double media) {
-        this.media = media;
-    }
-
     public int getFalta() {
         return falta;
     }
-    public void setFalta(int falta) {
-        this.falta = falta;
-    }
+
+    public void setNota1(Double nota1) {this.nota1 = nota1; System.out.println("Nota atribuida com sucesso!");}
+    public void setNota2(Double nota2) {this.nota2 = nota2; System.out.println("Nota atribuida com sucesso!");}
+    public void setNota3(Double nota3) {this.nota3 = nota3; System.out.println("Nota atribuida com sucesso!");}
+    public void setNota4(Double nota4) { this.nota4 = nota4; System.out.println("Nota atribuida com sucesso!");}
+    public void setMedia(Double media) {this.media = media;};
+    public void setFalta(int falta) { this.falta = falta;};
 }

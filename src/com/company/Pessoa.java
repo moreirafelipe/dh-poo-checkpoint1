@@ -9,6 +9,7 @@ public abstract class Pessoa {
 
     //Método para relação de composição entre professores, turmas e alunos
     public abstract void atribuirTurmas(Turma turma);
+    public abstract void mostrarDados();
 
     //Modificadores de acesso
     public String getNome() {

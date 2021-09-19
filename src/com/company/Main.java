@@ -27,7 +27,6 @@ public class Main {
 
         Main menu = new Main();
         Colegio colegio = new Colegio();
-        Scanner lerMenu = new Scanner(System.in);
 
         //Populando dados
         colegio.disciplinas.put(01, "Portugues");
@@ -35,12 +34,19 @@ public class Main {
         colegio.disciplinas.put(03, "Ciencias");
         colegio.disciplinas.put(04, "Historia");
 
-        short opcaoMenu = 0;
+        int opcaoMenu = 0;
 
         do{
+            Scanner lerMenu = new Scanner(System.in);
             menu.inicio();
             System.out.println("\nEscolha uma opção: \n");
-            opcaoMenu = lerMenu.nextShort();
+
+            while(!lerMenu.hasNextInt()) {
+                System.out.println("Por favor, digite apenas números inteiros positivos!");
+                lerMenu.next();
+            }
+
+            opcaoMenu = lerMenu.nextInt();
 
             switch(opcaoMenu){
                 case 1: colegio.cadastrarAlunos();

@@ -10,7 +10,8 @@ public class Turma {
 
     //Método para exibição de dados da classe
     public void dadosTurma(){
-        System.out.println("\n--------- Dados da turma " + id_turmas + "--------\n");
+        System.out.println("\n                 Dados da turma " + id_turmas +                          "\n");
+        System.out.println("||---------------------------------------------------------------------------||");
         System.out.println("ID turma: " + this.getId_turmas());
     }
 
